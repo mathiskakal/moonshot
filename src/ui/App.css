@@ -1,0 +1,85 @@
+/*
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+*/
+
+/* CSS Variables for theming - Light/Dark mode support */
+:root {
+  color-scheme: light dark;
+}
+
+/* Light mode (default) */
+:root {
+  --app-bg: light-dark(#ffffff, #1a1a1a);
+  --main-text-color: light-dark(#212529, #e9ecef);
+}
+
+.app-container {
+  width: 98%;
+  height: 98vh;
+  box-sizing: border-box;
+  display: flex; 
+  flex-direction: column; 
+  background-color: var(--app-bg);
+  /* Remove justify-content: space-between to prevent extra spacing */
+}
+
+/* Tables Area - 84% of container height (reduced to accommodate ViewTabs) */
+.tables-area {
+  height: 84%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  overflow: hidden; /* DataTable component will handle scrolling */
+  padding: 8px; /* Small padding around the table area */
+}
+
+/* Placeholder View Styling */
+.placeholder-view, .view-error, .unknown-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 400px;
+}
+
+.placeholder-content, .error-content {
+  text-align: center;
+  padding: 40px;
+  background-color: light-dark(#f8f9fa, #2d3748);
+  border-radius: 12px;
+  border: 2px dashed light-dark(#dee2e6, #4a5568);
+  max-width: 400px;
+}
+
+.placeholder-icon, .error-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.placeholder-content h3, .error-content h3 {
+  color: var(--main-text-color);
+  margin: 0 0 12px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.placeholder-content p, .error-content p {
+  color: light-dark(#6c757d, #a0aec0);
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.unknown-view {
+  background-color: light-dark(#fff3cd, #744210);
+  color: light-dark(#856404, #fef9e7);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid light-dark(#ffeaa7, #d69e2e);
+}

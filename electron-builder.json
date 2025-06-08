@@ -1,0 +1,20 @@
+{
+    "appId": "com.thiskaworks.rexmax",
+    "files": ["dist-electron", "dist-react"],
+    "extraResources": ["dist-electron/preload.cjs"],
+    "icon": "./RexMaxIcon.png",
+    "mac": {
+        "target": "dmg"
+    },
+    "linux": {
+        "target": "AppImage",
+        "category": "Utility"
+    },
+    "win": {
+        "target": ["portable"]
+    },
+    "asar": true,
+    "asarUnpack" :[
+        "**/node_modules/odbc/**"
+    ]
+}

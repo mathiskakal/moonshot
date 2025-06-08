@@ -1,0 +1,121 @@
+/* Ribbon Component Styles */
+
+/* CSS Variables for ribbon theming - Light/Dark mode support */
+:root {
+  /* Ribbon-specific variables */
+  --ribbon-bg: light-dark(#f8f9fa, #2d2d2d);
+  --ribbon-border-color: light-dark(#dee2e6, #404040);
+  --button-bg: light-dark(#ffffff, #343a40);
+  --button-border-color: light-dark(#ced4da, #495057);
+  --button-text-color: light-dark(#495057, #ced4da);
+  --button-hover-bg: light-dark(#e9ecef, #495057);
+  --button-disabled-bg: light-dark(#e9ecef, #2d2d2d);
+  --button-disabled-text-color: light-dark(#6c757d, #6c757d);
+  --main-text-color: light-dark(#212529, #e9ecef);
+  
+  /* Button variants - maintain good contrast in both modes */
+  --button-primary-bg: light-dark(#f8f9fa, #2d2d2d);
+  --button-primary-text: #ffffff;
+  --button-secondary-bg: light-dark(#6c757d, #6c757d);
+  --button-secondary-text: #ffffff;
+  --button-danger-bg: light-dark(#dc3545, #dc3545);
+  --button-danger-text: #ffffff;
+}
+
+/* Top Ribbon - 10% of container height */
+.top-ribbon {
+  height: 10%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: stretch; /* Make buttons stretch to full height */
+  padding: 8px; /* Reduced padding to match table area */
+  box-sizing: border-box;
+  background-color: var(--ribbon-bg);
+  border-bottom: 1px solid var(--ribbon-border-color);
+  /* No gap - seamless tabs */
+}
+
+/* Ribbon Button Styles */
+.ribbon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid var(--button-border-color);
+  background-color: var(--button-bg);
+  color: var(--button-text-color);
+  border-radius: 0; /* Remove individual border radius */
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1; /* Buttons grow to fill available space evenly */
+}
+
+/* Remove left border from all buttons except first */
+.ribbon-button:not(:first-child) {
+  border-left: none;
+}
+
+/* First button - rounded top-left corner */
+.ribbon-button:first-child {
+  border-top-left-radius: 12px;
+}
+
+/* Last button - rounded top-right corner */
+.ribbon-button:last-child {
+  border-top-right-radius: 12px;
+}
+
+.ribbon-button:hover:not(:disabled) {
+  background-color: var(--button-hover-bg);
+  border-color: var(--button-border-color);
+  /* Reduced transform for seamless tab effect */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  /* Ensure hover state maintains border consistency */
+  z-index: 1;
+}
+
+.ribbon-button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.ribbon-button:disabled {
+  background-color: var(--button-disabled-bg);
+  color: var(--button-disabled-text-color);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Button Variants */
+.ribbon-button.primary {
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  border-color: var(--button-primary-bg);
+}
+
+.ribbon-button.secondary {
+  background-color: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+  border-color: var(--button-secondary-bg);
+}
+
+.ribbon-button.danger {
+  background-color: var(--button-danger-bg);
+  color: var(--button-danger-text);
+  border-color: var(--button-danger-bg);
+}
+
+/* Button Icon */
+.button-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.button-label {
+  font-weight: 500;
+  color: var(--main-text-color);
+}

@@ -1,0 +1,154 @@
+/* MinMaxView Component Styles */
+
+/* CSS Variables for MinMax view theming - Light/Dark mode support */
+:root {
+  /* MinMax-specific variables */
+  --minmax-bg: light-dark(#ffffff, #1a1a1a);
+  --minmax-card-bg: light-dark(#f8f9fa, #2d3748);
+  --minmax-border-color: light-dark(#e1e5e9, #404040);
+  --minmax-text-color: light-dark(#212529, #e9ecef);
+  --minmax-subtitle-color: light-dark(#6c757d, #a0aec0);
+  --minmax-accent-color: light-dark(#007bff, #66b3ff);
+}
+
+.minmax-view {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: var(--minmax-bg);
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.minmax-content {
+  width: 100%;
+  max-width: 800px;
+}
+
+.minmax-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.minmax-header h2 {
+  color: var(--minmax-text-color);
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.minmax-subtitle {
+  color: var(--minmax-subtitle-color);
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.minmax-hello-world {
+  display: flex;
+  justify-content: center;
+}
+
+.hello-world-card {
+  background-color: var(--minmax-card-bg);
+  border: 2px solid var(--minmax-border-color);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hello-world-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.hello-world-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.hello-world-card h3 {
+  color: var(--minmax-text-color);
+  margin: 0 0 16px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.hello-world-card p {
+  color: var(--minmax-subtitle-color);
+  margin: 12px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.coming-soon-features {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.coming-soon-features h4 {
+  color: var(--minmax-accent-color);
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.coming-soon-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.coming-soon-features li {
+  color: var(--minmax-text-color);
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px solid var(--minmax-border-color);
+}
+
+.coming-soon-features li:last-child {
+  border-bottom: none;
+}
+
+.data-preview {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: light-dark(#e3f2fd, #1a237e);
+  border-radius: 8px;
+  border: 1px solid light-dark(#2196f3, #3f51b5);
+}
+
+.data-preview p {
+  color: light-dark(#1565c0, #9fa8da);
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .minmax-view {
+    padding: 16px;
+  }
+  
+  .hello-world-card {
+    padding: 24px;
+    margin: 0 8px;
+  }
+  
+  .minmax-header h2 {
+    font-size: 24px;
+  }
+  
+  .hello-world-card h3 {
+    font-size: 20px;
+  }
+}
