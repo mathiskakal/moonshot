@@ -1,11 +1,12 @@
 # RexMax
 ### *Improve inventory management by adjusting ordering thresholds thanks to trusted data and insights.*
 
-Please read the documentation in /documents to learn more about this project!
+Please read the following documentation in to learn more about this project!
+- [Project Charter](https://github.com/mathiskakal/moonshot/blob/4c0d15d1f57055739b8938ce3dd76de7baa3455a/documents/project-charter.md)
 
 ## How to build?
 
-1. Clone the repository to your windows computer using your preferred cloning method.
+1. Clone the repository to your Windows computer using your preferred cloning method.
 2. Run `npm install && npm run dev`
 
 > [!IMPORTANT]
