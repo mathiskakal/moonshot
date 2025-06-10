@@ -17,7 +17,8 @@ I hope that you find it informative, and that you enjoy your read.
 
 ### 2) Project Overview (Why)
 
- Probably state that it would be better to read the project charter first, but give an overview of the project again.
+> [!IMPORTANT]
+> Reading the project charter located in the same folder could help gain additional context, as it is the document that served as a contract between I, the project owner, and the customer.
 
 RexMax is the name I have given to this project: an application, destined to solve a problem that are currently facing store owners of a home improvement franchise abroad, in Mauritius Island.
 
@@ -67,6 +68,9 @@ RexMax is my answer to their problems, and this is what this document will explo
 
 ### 4) Project Methodology (How)
 
+> [!NOTE]
+> This part has already been covered in the project charter. It is also here for accessibility.
+
 30 days of learning, of which:
 
 - 8 days of professional training on supply chain and inventory management,
@@ -91,6 +95,9 @@ Util then, a same day answer to requests, and same week intervention for less im
 
 ### 5) Project Plan (When)
 
+> [!NOTE]
+> This part has already been covered in the project charter. It is also here for accessibility.
+
 #### Planning
 
 ![image](https://github.com/user-attachments/assets/de0119f3-6d5f-46d7-9f3c-542c24076296)
@@ -113,7 +120,7 @@ Util then, a same day answer to requests, and same week intervention for less im
 | Begin Beta Tests: | 2025-06-30 Mon |
 | 1.0.0 Full Release Delivery: | 2025-12-31 Wed |
 
-### 7) Project Deliverables (What)
+### 6) Project Deliverables (What)
 
 | Name | Type | Deadline | Goal | Link |
 |---|---|---|---|---|
@@ -282,6 +289,9 @@ There are five main categories emerging from those comments/requests:
 
 Those insights will impact both functional requirements, non-functional requirements, as well as the overall methodology, and they will be crucial to keep in mind when converging to a solution.
 
+> [!IMPORTANT]
+> It is important to keep in mind that the improvement of the ordering process will only have visible effects in 3-4 months (because of shipping times), at the end of the year, which is why this mission will last until January 2026.
+
 # D) Functional Requirements
 
 Before starting analysing the requirements and subsequent use cases, let's first enumerate all the constraints this project has, as they are actually quite heavy.
@@ -309,7 +319,7 @@ After validation of this initial idea, the stakeholders and I compiled a table o
 
 | Must Have | Should Have | Could Have | Won't Have |
 |---|---|---|---|
-| • Application for setting minimum and maximum order thresholds that allows to look at the most store manager's preferred data to make informed decisions for each SKU. [^UC-01], [^UC-02] | • System provides actual adjustment recommendations (increase or decrease) [UC-09] | • Data visualisation on select/most important metrics to ease the eye. The goal is to allow to make quicker judgments and having less eye fatigue at the end of the day. [UC-13] | • Complete ERP suite that would fix problems tied to the current one. |
+| • Application for setting minimum and maximum order thresholds that allows to look at the most store manager's preferred data to make informed decisions for each SKU. [UC-01], [UC-02] | • System provides actual adjustment recommendations (increase or decrease) [UC-09] | • Data visualisation on select/most important metrics to ease the eye. The goal is to allow to make quicker judgments and having less eye fatigue at the end of the day. [UC-13] | • Complete ERP suite that would fix problems tied to the current one. |
 | • No automatic proposition for adjusting the thresholds, but detection of the necessity to adjust them, based on 4 scenarios : Surplus, Sales improvement, New product, Shortage alert. [UC-01], [UC-03] | • Have an history of all the past decisions to be able to improve judgment over time (and train an ai afterwards) [UC-10] | • Ability to authentify users, allowing for role based access control.  [UC-14], [UC-15] | • Tackling infrastructure problems (underpowered server, synchronous nature of apps which doesn't go well with the overall latency, network/VPN problems etc.) |
 | • Displayed SKUs will be a restrained to a specific subset of all store SKUs: Only SKUs for store A, of which only those who come from European suppliers, of which only those that represent the 20% in quantity that make up 80% of the sales in quantity, of which only the articles that are in "Permanent" or "New" mode, as the other modes don't require automatic resupplying. This amounts to ~~1000 SKUs. [UC-01], [UC-04] | • Notify resuppliers automatically of any threshold changes, once a week. [UC-11] | • "Duolingo mode" Automatic sorting of SKUs by importance, by weighing different criteria. SKUs would be sorted by most urgent first, and users would only have to take care of the first items to always be working on what is important.  [UC-16] | • AI-powered solution that takes automatically sets the thresholds. |
 | • Generates an excel file in Min/Max format, so that it doesn't disrupt the current threshold updating process, which is crucial to ensure database integrity. [UC-05] | • Improvement of search to include all or most relevant data [UC-12] | • Customising the interface (once testing has extended to other store managers) to take into account different methodologies. [UC-17] | • Solution that is adapted to all of the Stores upon initial releases. |
@@ -351,6 +361,9 @@ After validation of this initial idea, the stakeholders and I compiled a table o
 | [UC-19]: Submit Feedback | Ribbon button opens chatbot that fills an issue template and posts to Git repo. | Store Manager | Network access to repo API; User authenticated (UC-14).; GitHub Api token available in config. | 1. User clicks **Feedback / Support**.[:br][:br]2. Chatbot side-panel opens; asks guided questions.[:br][:br]3. Answers populate Markdown issue template.[:br][:br]4. User reviews and clicks **Envoyer**.[:br][:br]5. App POSTs issue via repo API; receives issue URL.[:br][:br]6. Panel shows “Merci !” with link. | Issue created in repository; URL logged for follow-up. | User submits issue OR closes chatbot unsent. | It would be good to have a GitHub bot automatically triage the issues to be able to use the GitHub Project as an efficient Backlog |
 
 # E) Non-Functional Requirements
+
+> [!IMPORTANT]
+> Those requirements are generally for the full release of the app, and cannot be expected from its first iterations. Iteration of the product will help build towards the following standards of quality.
 
 ### Costs
 
@@ -507,6 +520,9 @@ This screen is where the adjustments are actually made (or suggested adjustment 
 
 #### App launch sequence [UC-01] to [UC-08]
 
+> [!NOTE]
+> UC-09 onwards actually modify existing sequence as they are new "layers" or development and refinement.  The following only applies to that first stage of development (UC-01 to UC-08)
+
 ```mermaid
 flowchart TD
     %% RexMax – Start-up & Config Load (UC-01 ↔ UC-08)
@@ -621,6 +637,9 @@ flowchart TD
 
 #### Linear Regression Min/Max Adjusting System [UC-09]
 
+> [!NOTE]
+> This whole procedure is appended to the previous launch sequence, as is also the case for other "Could Haves" and "Should Haves" UCs
+
 ```mermaid
 flowchart TD
     %%  UC-09 — Light ML Recommendation Loop
@@ -670,6 +689,9 @@ flowchart TD
 ```
 
 ### 3) Acceptance criteria list
+
+> [!TIP]
+> The goal of the acceptance criteria are to explicitly state what is expected from a successful implementation of the Use Cases, thanks to a "Given" => "When" => "Then" framework. This is the foundation of clear testing and it help bring requirements even further into the realm of specifications.  
 
 #### UC-01 - Open the application to the main screen
 
@@ -815,6 +837,9 @@ flowchart TD
 
 ### 4) Column Mapping
 
+> [!NOTE]
+> This is the mapping of all the columns that were requested by the end user for their "**Données**" view. 
+
 | Display Name | Source Column / Expression | Base Table |
 |---|---|---|
 | Code Item | ArticlesDimUDF.articlescode | ArticlesDimUDF |
@@ -928,6 +953,9 @@ Here are some of the low-code/no-code frameworks/stacks I considered.
 Showstopper: HFSQL/ODBC integration would require an intermediate sync tool or manual exports (unless I write a connector or run RPA scripts on a Windows VM[^27]).
 
 Another Showstopper: The fact that it is an online-first tool, which is incompatible with the very unstable/slow network of the office, as listed in the constraints. 
+
+> [!NOTE]
+> I could also mention [Retool](https://retool.com/) and [Google Appsheet](https://about.appsheet.com/home/) which are similar in the sense that they are online first, therefore won't be useful for us
 
 ### 2. WinDev
 
