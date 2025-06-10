@@ -1491,13 +1491,13 @@ graph TD
 
 I tool some inspiration from Clean Architecture principles:
 
-**Entities / Core** => plain TypeScript models (`Sku`, `ThresholdDecision`).
+- **Entities / Core** => plain TypeScript models (`Sku`, `ThresholdDecision`).
 
-**Use-cases** => `AnalyzerService.detectNeedForAdjustment()`, `RegressionService.suggest()`.
+- **Use-cases** => `AnalyzerService.detectNeedForAdjustment()`, `RegressionService.suggest()`.
 
-**Interface adapters** => IPC controllers, SQLite mappers, CSV exporters.
+- **Interface adapters** => IPC controllers, SQLite mappers, CSV exporters.
 
-**Frameworks** => Electron, React, Python.
+- **Frameworks** => Electron, React, Python.
 
 No inner circle imports an outer circle. For instance, swapping SQLite for RealmDB or React for Svelte changes only the outermost ring.
 
@@ -1520,9 +1520,9 @@ function handleUserSignup(formData) {
 
 **Problems**:
 
-UI knows about DB and utility implementations.
+- UI knows about DB and utility implementations.
 
-No abstraction; hard to test or swap out layers.
+- No abstraction; hard to test or swap out layers.
 
 **Good Example**
 
@@ -1563,11 +1563,11 @@ function handleUserSignup(formData) {
 
 **Benefits**:
 
-UI layer only talks to high-level interfaces.
+- UI layer only talks to high-level interfaces.
 
-Infrastructure is swappable/mocked in tests.
+- Infrastructure is swappable/mocked in tests.
 
-Business logic is isolated and reusable.
+- Business logic is isolated and reusable.
 
 ### Dependency Injection...
 
@@ -1601,11 +1601,11 @@ const db = DatabaseService.getInstance();
 
 **Problems**:
 
-Hidden dependencies (not explicit in constructor).
+- Hidden dependencies (not explicit in constructor).
 
-Harder to test (can’t inject mock).
+- Harder to test (can’t inject mock).
 
-State leaks between tests.
+- State leaks between tests.
 
 **Good Example**
 
@@ -1628,15 +1628,15 @@ const userService = new UserService(db);
 
 **Benefits**:
 
-All dependencies are explicit.
+- All dependencies are explicit.
 
-Easy to swap in a mock for testing.
+- Easy to swap in a mock for testing.
 
-No global mutable state.
+- No global mutable state.
 
 ### Functional Programming vs. OOP
 
-Finally it is important to point out that the coding styles are also heavily influenced by the frameworks.
+Finally, it is important to point out that the coding styles are also heavily influenced by the frameworks.
 
 #### Frontend: FP first
 
@@ -1972,23 +1972,23 @@ I settled on a linear regression model for the recommendation engine. In simple 
 
 **Other options I explored**
 
-**Decision trees / Gradient boosting**: Can learn more complex patterns, but they’re slower to train and need extra setup. => This could be better to remove "spikes" from data, which can indeed become problematic without context.
+- **Decision trees / Gradient boosting**: Can learn more complex patterns, but they’re slower to train and need extra setup. => This could be better to remove "spikes" from data, which can indeed become problematic without context.
 
-**k-Nearest Neighbors**: Just averages the closest historical points, but it gets slow when you have thousands of items.
+- **k-Nearest Neighbors**: Just averages the closest historical points, but it gets slow when you have thousands of items.
 
-**Support Vector Regression**: Handles odd data distributions well, but it’s tricky to tune the parameters. => I don't believe I have enough understanding of it to use it.
+- **Support Vector Regression**: Handles odd data distributions well, but it’s tricky to tune the parameters. => I don't believe I have enough understanding of it to use it.
 
 **Why I chose plain linear regression**
 
-**It is the only one that I am really familiar with and understand as of now**: I do plan to learn more, but for now this is unfortunately a key factor in this choice.
+- **It is the only one that I am really familiar with and understand as of now**: I do plan to learn more, but for now this is unfortunately a key factor in this choice.
 
-**Easy to understand**: I can read off how much each input (like sales change) influences the result.
+- **Easy to understand**: I can read off how much each input (like sales change) influences the result.
 
-**Fast**: It trains and predicts in milliseconds on our dataset (tested on a totally different project, however).
+- **Fast**: It trains and predicts in milliseconds on our dataset (tested on a totally different project, however).
 
-**No extra tuning**: Works out of the box with minimal code and dependencies.
+- **No extra tuning**: Works out of the box with minimal code and dependencies.
 
-**Good enough accuracy**: In tests, it kept prediction errors under 10%, which meets our goal without over-engineering.
+- **Good enough accuracy**: In tests, it kept prediction errors under 10%, which meets our goal without over-engineering.
 
 Here is the planned implementation for this:
 
@@ -2146,9 +2146,9 @@ The Build process is actually quite convoluted since our stack is chaining multi
 
 There are mainly two different processes that are interesting as a developer:
 
-`npm run dev`: which will run both the latest electron (backend) code, as well as the latest frontend code, through vite, which supports HMR (instant reloading),
+- `npm run dev`: which will run both the latest electron (backend) code, as well as the latest frontend code, through vite, which supports HMR (instant reloading),
 
-`npm run dist:win`: which will compile the windows executable.
+- `npm run dist:win`: which will compile the windows executable.
 
 The first one is for compiling the final executable, and the latter for regular development.
 
@@ -2220,17 +2220,17 @@ As of now, every time a test is performed with the user, they download the lates
 
 However, the already present **electron-builder** module features **electron-updater**, which allows:
 
-1. GitHub Releases Support Out-of-the-Box: Auto-update from a GitHub repository using public or private releases with minimal configuration. It handles version checking and downloading automatically.
+- 1. GitHub Releases Support Out-of-the-Box: Auto-update from a GitHub repository using public or private releases with minimal configuration. It handles version checking and downloading automatically.
 
-2. Cross-Platform Compatibility: electron-builder supports Windows, macOS, and Linux. Generate installers and auto-updates across all platforms.
+- 2. Cross-Platform Compatibility: electron-builder supports Windows, macOS, and Linux. Generate installers and auto-updates across all platforms.
 
-3. Delta Updates (Windows): Supports delta updates on Windows using Squirrel.Windows under the hood, saving bandwidth and update time.
+- 3. Delta Updates (Windows): Supports delta updates on Windows using Squirrel.Windows under the hood, saving bandwidth and update time.
 
-4. Easy Integration: Configure it in main.js, and it works. electron-builder takes care of the update server metadata and packaging format.
+- 4. Easy Integration: Configure it in main.js, and it works. electron-builder takes care of the update server metadata and packaging format.
 
-5. Code Signing Support: Built-in support for code signing on macOS and Windows, which is required for updates to work seamlessly.
+- 5. Code Signing Support: Built-in support for code signing on macOS and Windows, which is required for updates to work seamlessly.
 
-6. Progress and Status Feedback: Provides hooks and events to show download progress, notify users, and restart after update.
+- 6. Progress and Status Feedback: Provides hooks and events to show download progress, notify users, and restart after update.
 
 Other than the update considerations, all the rest of the toolchain, including type-checking, linting, signing etc. are already all bootstrapped in the current npm run commands. As of now, no other CI/CD requirements have been identified.
 
@@ -2238,13 +2238,13 @@ Other than the update considerations, all the rest of the toolchain, including t
 
 I am the sole developer of this product, with a hard jury demo in June, so I’m finishing core features first and adding deep tests once the workflow stops moving. For the MVP I just need to prove the app launches, edits thresholds and exports a file; everything else can wait. This “test-last” choice means I avoid rewriting specs every time a screen changes.
 
-**Testing tools that I will use** (and that are already part of the stack):
+- **Testing tools that I will use** (and that are already part of the stack):
 
-**Vitest** for unit + integration tests inside Node/JS DOM.
+- **Vitest** for unit + integration tests inside Node/JS DOM.
 
-**React Testing Library** for quick “does the component render?” checks.
+- **React Testing Library** for quick “does the component render?” checks.
 
-**Playwright** (headless) for one happy-path end-to-end script per big use-case.
+- **Playwright** (headless) for one happy-path end-to-end script per big use-case.
 
 **MVP test plan – June 2025**:
 
@@ -2274,7 +2274,7 @@ No unit tests today, but my goal is **100 % of business functions under Vitest b
 
 No GitHub Actions, dashboards or code-coverage gates; I’ll wire them once the suite exists.
 
-No monitoring/telemetry; crashes go to a local log that I review with the user.
+No monitoring/telemetry; crashes go to a local log that I review on my own.
 
 # I) Management Analysis
 
@@ -2311,17 +2311,17 @@ I am also very thankful for meeting extended circles of stakeholders as some pro
 
 This is a point that is often overlooked, but I knew from the get go that reliable AI usage would make all the difference in this project, especially given the time constraints, and since being assisted by AI is a thing, I believe that there are several levels of assistance that a developer could seek:
 
-0. Human-only mode: no AI at all.
+- 0. Human-only mode: no AI at all.
 
-1. AI for research: “What’s the stdlib equivalent of X?”  Super handy, but sometimes reading the docs front-to-back catches hidden pitfalls.
+- 1. AI for research: “What’s the stdlib equivalent of X?”  Super handy, but sometimes reading the docs front-to-back catches hidden pitfalls.
 
-2. AI for snippets: “Loop over this list and return the nth child.”  Great for boilerplate; easy to review for style compliance.
+- 2. AI for snippets: “Loop over this list and return the nth child.”  Great for boilerplate; easy to review for style compliance.
 
-3. AI for single functions: “Write the filter that sorts these records.”  Useful but watch for subtle design drift.
+- 3. AI for single functions: “Write the filter that sorts these records.”  Useful but watch for subtle design drift.
 
-4. AI for full use cases: “Build the entire Firebase auth flow.”  I’ve yet to get a 100 % spec-faithful result—small deviations snowball with each iteration.
+- 4. AI for full use cases: “Build the entire Firebase auth flow.”  I’ve yet to get a 100 % spec-faithful result—small deviations snowball with each iteration.
 
-5. AI for *Vibe Coding*: “Create an app that solves problem X for user Y.”  Opens wild new possibilities, but QA effort climbs fast.
+- 5. AI for *Vibe Coding*: “Create an app that solves problem X for user Y.”  Opens wild new possibilities, but QA effort climbs fast.
 
 In this scale, I was globally on level 2 and sometimes tried level 3, with mixed results.
 
@@ -2331,7 +2331,7 @@ For writing this document, I essentially used AI for research, rephrasing senten
 
 Risk management has been considered at the beginning of the project by analysing the constraints and anticipating what could go wrong with them.
 
-You may find the constraints analysis here  and the risk/mitigation matrix here.
+You may find the constraints analysis [here](#d-functional-requirements)  and the risk/mitigation matrix [here](https://github.com/mathiskakal/moonshot/blob/master/documents/project-charter.md#risk-management).
 
 ## Failures
 
