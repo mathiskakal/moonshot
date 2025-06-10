@@ -1644,15 +1644,15 @@ Unlike Flutter or other front-end frameworks that I am used to, React uses pure 
 
 This implies several things about React front-end code:
 
-**Pure render functions**: Components like `MyButton` just return what to show — no side effects.
+- **Pure render functions**: Components like `MyButton` just return what to show — no side effects.
 
-**Immutability**: When state changes, React makes a new copy instead of changing the old one.
+- **Immutability**: When state changes, React makes a new copy instead of changing the old one.
 
-**One-way data flow**: Props go from parent to child. Children send data back using functions.
+- **One-way data flow**: Props go from parent to child. Children send data back using functions.
 
-**Side-effect isolation**: Things like useEffect run after the screen is drawn, not during render.
+- **Side-effect isolation**: Things like useEffect run after the screen is drawn, not during render.
 
-**Higher-order composition**: You can pass components to functions or return new ones from functions — because functions are treated like regular values
+- **Higher-order composition**: You can pass components to functions or return new ones from functions — because functions are treated like regular values
 
 What does this mean for the code?
 
@@ -1753,7 +1753,7 @@ export class DatabaseService {
 
 Mixing both paradigms lets each tier play to its strength: FP for deterministic UI rendering, OOP for long-lived side-effectful processes.
 
-**Conclusion**: By leveraging Electron’s dual-process model alongside a strict layered architecture, a clear separation of concerns is maintained, ensuring responsiveness, testability, and extensibility. Stateless, dependency-injected services and DTO-only boundaries prevent hidden coupling and promote maintainability, while mixing functional patterns in the UI with objected-oriented services in the backend delivers both performant rendering and robust business logic. Overall, this design provides a scalable, secure foundation that aligns with the project’s tight deadlines and operational constraints.
+**Conclusion**: By leveraging Electron’s **dual-process model** alongside a **strict layered architecture**, a **clear separation of concerns** is maintained, ensuring responsiveness, testability, and extensibility. **Stateless, dependency-injected services** and **DTO-only boundaries** prevent hidden coupling and promote maintainability, while **mixing functional patterns in the UI with objected-oriented services in the backend** delivers both performant rendering and robust business logic. Overall, this design provides a scalable, secure foundation that aligns with the project’s tight deadlines and operational constraints.
 
 ## Modules
 
@@ -2220,17 +2220,17 @@ As of now, every time a test is performed with the user, they download the lates
 
 However, the already present **electron-builder** module features **electron-updater**, which allows:
 
-- 1. GitHub Releases Support Out-of-the-Box: Auto-update from a GitHub repository using public or private releases with minimal configuration. It handles version checking and downloading automatically.
+1. GitHub Releases Support Out-of-the-Box: Auto-update from a GitHub repository using public or private releases with minimal configuration. It handles version checking and downloading automatically.
 
-- 2. Cross-Platform Compatibility: electron-builder supports Windows, macOS, and Linux. Generate installers and auto-updates across all platforms.
+2. Cross-Platform Compatibility: electron-builder supports Windows, macOS, and Linux. Generate installers and auto-updates across all platforms.
 
-- 3. Delta Updates (Windows): Supports delta updates on Windows using Squirrel.Windows under the hood, saving bandwidth and update time.
+3. Delta Updates (Windows): Supports delta updates on Windows using Squirrel.Windows under the hood, saving bandwidth and update time.
 
-- 4. Easy Integration: Configure it in main.js, and it works. electron-builder takes care of the update server metadata and packaging format.
+4. Easy Integration: Configure it in main.js, and it works. electron-builder takes care of the update server metadata and packaging format.
 
-- 5. Code Signing Support: Built-in support for code signing on macOS and Windows, which is required for updates to work seamlessly.
+5. Code Signing Support: Built-in support for code signing on macOS and Windows, which is required for updates to work seamlessly.
 
-- 6. Progress and Status Feedback: Provides hooks and events to show download progress, notify users, and restart after update.
+6. Progress and Status Feedback: Provides hooks and events to show download progress, notify users, and restart after update.
 
 Other than the update considerations, all the rest of the toolchain, including type-checking, linting, signing etc. are already all bootstrapped in the current npm run commands. As of now, no other CI/CD requirements have been identified.
 
@@ -2311,17 +2311,17 @@ I am also very thankful for meeting extended circles of stakeholders as some pro
 
 This is a point that is often overlooked, but I knew from the get go that reliable AI usage would make all the difference in this project, especially given the time constraints, and since being assisted by AI is a thing, I believe that there are several levels of assistance that a developer could seek:
 
-- 0. Human-only mode: no AI at all.
+0. Human-only mode: no AI at all.
 
-- 1. AI for research: “What’s the stdlib equivalent of X?”  Super handy, but sometimes reading the docs front-to-back catches hidden pitfalls.
+1. AI for research: “What’s the stdlib equivalent of X?”  Super handy, but sometimes reading the docs front-to-back catches hidden pitfalls.
 
-- 2. AI for snippets: “Loop over this list and return the nth child.”  Great for boilerplate; easy to review for style compliance.
+2. AI for snippets: “Loop over this list and return the nth child.”  Great for boilerplate; easy to review for style compliance.
 
-- 3. AI for single functions: “Write the filter that sorts these records.”  Useful but watch for subtle design drift.
+3. AI for single functions: “Write the filter that sorts these records.”  Useful but watch for subtle design drift.
 
-- 4. AI for full use cases: “Build the entire Firebase auth flow.”  I’ve yet to get a 100 % spec-faithful result—small deviations snowball with each iteration.
+4. AI for full use cases: “Build the entire Firebase auth flow.”  I’ve yet to get a 100 % spec-faithful result—small deviations snowball with each iteration.
 
-- 5. AI for *Vibe Coding*: “Create an app that solves problem X for user Y.”  Opens wild new possibilities, but QA effort climbs fast.
+5. AI for *Vibe Coding*: “Create an app that solves problem X for user Y.”  Opens wild new possibilities, but QA effort climbs fast.
 
 In this scale, I was globally on level 2 and sometimes tried level 3, with mixed results.
 
