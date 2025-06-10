@@ -3,6 +3,7 @@
 
 Please read the following documentation in to learn more about this project!
 - [Project Charter](https://github.com/mathiskakal/moonshot/blob/4c0d15d1f57055739b8938ce3dd76de7baa3455a/documents/project-charter.md)
+- [RexMax Specifications](https://github.com/mathiskakal/moonshot/blob/master/documents/rexmax-specifications.md)
 
 ## How to build?
 
