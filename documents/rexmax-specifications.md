@@ -14,6 +14,96 @@ ___
 <details>
 <summary><em>Click to expand table of contents...</em></summary>
 
+- [A) Introduction](#a-introduction)
+  - [1) Document Purpose](#1-document-purpose)
+  - [2) Project Overview (Why)](#2-project-overview-why)
+  - [3) Project Roles (Who)](#3-project-roles-who)
+    - [Stakeholders](#stakeholders)
+    - [Explanation of the roles](#explanation-of-the-roles)
+  - [4) Project Methodology (How)](#4-project-methodology-how)
+  - [5) Project Plan (When)](#5-project-plan-when)
+    - [Planning](#planning)
+    - [Milestones](#milestones)
+  - [6) Project Deliverables (What)](#6-project-deliverables-what)
+- [B) Business Requirements](#b-business-requirements)
+- [C) User Research](#c-user-research)
+- [D) Functional Requirements](#d-functional-requirements)
+  - [MoSCoW Feature Analysis](#moscow-feature-analysis)
+  - [Must Have Use Case Analysis](#must-have-use-case-analysis)
+  - [Should Have Use Case Analysis](#should-have-use-case-analysis)
+  - [Could Have Use Case Analysis](#could-have-use-case-analysis)
+- [E) Non-Functional Requirements](#e-non-functional-requirements)
+  - [Costs](#costs)
+  - [Reliability](#reliability)
+  - [Response/Performance](#responseperformance)
+  - [Delivery](#delivery)
+  - [Maintainability](#maintainability)
+  - [Security](#security)
+  - [Compliance & Legal](#compliance--legal)
+  - [Data Integrity](#data-integrity)
+  - [Accessibility & Usability](#accessibility--usability)
+  - [Interoperability](#interoperability)
+  - [Extensibility & Configurability](#extensibility--configurability)
+  - [Localization](#localization)
+  - [User Experience](#user-experience)
+- [F) Functional Specifications](#f-functional-specifications)
+  - [1) Wireframes](#1-wireframes)
+  - [2) Sequence Diagrams](#2-sequence-diagrams)
+  - [3) Acceptance criteria list](#3-acceptance-criteria-list)
+  - [4) Column Mapping](#4-column-mapping)
+- [G) Technical Specifications](#g-technical-specifications)
+  - [Technology Stack](#technology-stack)
+    - [1. Microsoft Power Apps + Power Automate + Dataverse](#1-microsoft-power-apps--power-automate--dataverse)
+    - [2. WinDev](#2-windev)
+    - [3. NET (C) WinFormsWPF + SQLite + C MLNET](#3-net-c-winformswpf--sqlite--c-mlnet)
+    - [4. Electron + Vite + React + TypeScript + TanStack + Vitest + Python ML](#4-electron--vite--react--typescript--tanstack--vitest--python-ml)
+    - [5. Final Stack Choice](#5-final-stack-choice)
+  - [High-Level Architecture](#high-level-architecture)
+    - [Electron Architecture](#electron-architecture)
+    - [Layered Architecture](#layered-architecture)
+    - [Services-oriented](#services-oriented)
+    - [Clean Architecture](#clean-architecture)
+    - [Dependency Injection](#dependency-injection)
+    - [Functional Programming vs. OOP](#functional-programming-vs-oop)
+  - [Modules](#modules)
+    - [Module Map (Back-end)](#module-map-back-end)
+    - [Module Map (Front-end)](#module-map-front-end)
+    - [Authoring guidelines](#authoring-guidelines)
+  - [Data Design](#data-design)
+    - [Back-end types & interfaces](#back-end-types--interfaces)
+    - [Front-end types & interfaces](#front-end-types--interfaces)
+    - [Export CSV](#export-csv)
+    - [History CSV](#history-csv)
+  - [Algorithm Selection](#algorithm-selection)
+  - [Security Design](#security-design)
+    - [Attack Thread Model](#attack-thread-model)
+    - [Security Architecture](#security-architecture)
+  - [Build & CI/CD Pipeline](#build--cicd-pipeline)
+    - [Building](#building)
+    - [NPM run dev](#npm-run-dev)
+    - [NPM run dist:win](#npm-run-distwin)
+    - [CI/CD Pipeline](#cicd-pipeline)
+- [H) Quality Assurance](#h-quality-assurance)
+- [I) Management Analysis](#i-management-analysis)
+  - [General organisation](#general-organisation)
+  - [Notes on the communication with Stakeholders](#notes-on-the-communication-with-stakeholders)
+  - [Notes on AI methodology](#notes-on-ai-methodology)
+  - [Risk Management](#risk-management)
+  - [Failures](#failures)
+- [J) Future Improvements](#j-future-improvements)
+- [Glossary](#glossary)
+
+</details>
+
+---
+
+**How to use:**  
+- Copy the entire block into your Markdown file.
+- The links will work as long as your document’s headings are unchanged.
+- On GitHub, these anchor links are case-insensitive and ignore most punctuation.
+
+Let me know if you need anchors for any additional sub-sub-sections, or want this as a collapsible block (as above) or as a flat list!
+
 
 </details>
 
@@ -329,7 +419,7 @@ I could hypothesise from this that a good starting point would be an app that so
 
 After validation of this initial idea, the stakeholders and I compiled a table of features prioritised by importance thanks to a MoSCoW analysis[^14]. Here are the high-level features of the product, after several weeks of meetings and brainstorming, and that were approved by the mission supervisor:
 
-### MoSCoW feature analysis
+## MoSCoW feature analysis
 
 | Must Have | Should Have | Could Have | Won't Have |
 |---|---|---|---|
@@ -340,7 +430,7 @@ After validation of this initial idea, the stakeholders and I compiled a table o
 | • Basic column sorting (ascending or descending) and search by SKU and supplier. [UC-06], [UC-07] | | • Gamification elements, such as notifications/reminders and "visual accomplishments feedback" to encourage averaging out the setting of the thresholds throughout the year, rather than all at once. [UC-18] | |
 | • Config-based interface, however, no config tool, therefore interface isn't customisable yet. [UC-08] | | • Built-in feedback form to support the rapid iteration process and to allow users to directly submit tickets for feature improvements, bugs or simple requests through the app interface. [UC-19] | |
 
-### Must Have Use Case Analysis
+## Must Have Use Case Analysis
 
 | Use Case Number & Name | Description | Actor(s) | Pre-Conditions | Flow of Events | Post-Conditions | Exit Criteria | Notes & Issues |
 |---|---|---|---|---|---|---|---|
@@ -353,7 +443,7 @@ After validation of this initial idea, the stakeholders and I compiled a table o
 | [UC-07]: Search by SKU or Supplier | Quickly isolate rows matching typed text. (One filter at the time) | Store Manager | Requires UC-04 and UC-01 | 1. Click search box and type query;<br><br>2. Depending on the string format provided (text or only numbers) search will automatically search either indexed supplier field or SKU field for matching items and will apply a global filter on the table.; <br><br>3. Table is filtered to show only that supplier or only that reference<br><br>4. Supplier clears the filter by clicking the filter chip cross below the ribbon (along the UC-04 global filters) | Table shows only matching rows (zero or many); No search history for now. | User clears search field, or search filters **or** navigates away | Search should be < 2s for any supplier or reference, UI should be minimal to suggest very minimal functionality for now. |
 | [UC-08]: Load Config-Based UI | Build and display UI components from YAML/JSON config at app start-up. | System | Valid config file found in AppData/Roaming/Rexmax; UC-01 implemented. | 1. App launches;<br><br>2. System reads default config and/or user overrides;<br><br>3. Components instantiated per schema; | UI available for interaction; | All components render successfully **or** critical error leads to fallback screen. | Add hot-reload for config in dev mode.<br>Might add config hash to logging for diagnostics later. |
 
-### Should Have Use Case Analysis
+## Should Have Use Case Analysis
 
 | Use Case Number & Name | Description | Actor(s) | Pre-Conditions | Flow of Events | Post-Conditions | Exit Criteria | Notes & Issues |
 |---|---|---|---|---|---|---|---|
@@ -362,7 +452,7 @@ After validation of this initial idea, the stakeholders and I compiled a table o
 | [UC-11]: Weekly Threshold-Change Notification | Prepare a pre-filled email draft listing all adjustments made during the past week. | Store Manager | At least one approved adjustment exists in pending adjustments (a.k.a. "**Export**" tab/pane; Default email client installed (All company has outlook mail configured). | 1. User clicks "**Notifier Acheteuses **"<br><br>2. App compiles change list into plain-text table.<br><br>3. App triggers a `mailto:` URI with subject “Min/Max weekly digest <YYYY-WW>” and body containing the table.<br><br>4. OS opens default mail client with draft ready. | Email draft visible to user for review. | User sends email OR closes draft unsent. | Add recipient list to config file. (The Replenishers and The Buying Team)<br><br>Might move to another more robust system but this will work for now. |
 | [UC-12]: Advanced Search | Search across multiple fields (SKU, supplier, category, reason tag) with AND logic. | Store Manager | “**Données**” or “**Min/Max**” table displayed; | 1. User presses "**Ctrl + F**" or clicks the same "**Recherche**" as in UC-07.<br><br>2. There are now as many search fields as there are Columns.<br><br>3. User fills one or more fields and hits "**Appliquer**".<br><br>4. App builds combined filter and refreshes table; Chips for each criterion appear under ribbon.<br><br>5. User can save query as “Favori” or clear all chips. | Table shows rows matching composite query; Criteria stored in session until app exit. | User clears chips OR closes modal. | Ensure response time ≤ 2 s for queries returning up to 3 000 rows.<br><br>For now, the advanced search will only support chaining conditions with AND logic, narrowing the results down as more conditions are added. |
 
-### Could Have Use Case Analysis
+## Could Have Use Case Analysis
 
 | Use Case Number & Name | Description | Actor(s) | Pre-Conditions | Flow of Events | Post-Conditions | Exit Criteria | Notes & Issues |
 |---|---|---|---|---|---|---|---|
@@ -379,19 +469,19 @@ After validation of this initial idea, the stakeholders and I compiled a table o
 > [!IMPORTANT]
 > Those requirements are generally for the full release of the app, and cannot be expected from its first iterations. Iteration of the product will help build towards the following standards of quality.
 
-### Costs
+## Costs
 
-#### I - Capital Expenditures
+### I - Capital Expenditures
 
 Limited to the cost of the development, as agreed in the mission contract.
 
-#### II - Operational Expenditures
+### II - Operational Expenditures
 
 None, the app will leverage existing database and network infrastructure. No additional costs.
 
 Only GitHub could require credits for running jobs and issues API, however, current use will be covered by my student plan for at least another year.
 
-### Reliability
+## Reliability
 
 | Aspect | Target / Mechanism |
 |---|---|
@@ -400,7 +490,7 @@ Only GitHub could require credits for running jobs and issues API, however, curr
 | Fault Tolerance | Auto-retry ×3 for DB / SMTP transient errors |
 | Health Monitoring | Local log + Windows Event on unhandled exception |
 
-### Response/Performance
+## Response/Performance
 
 | User Action / Process | Requirement (95-th percentile) |
 |---|---|
@@ -414,23 +504,23 @@ Only GitHub could require credits for running jobs and issues API, however, curr
 | Sustained CPU | ≤ 40 % of 4-core i7 |
 | Sustained RAM | ≤ 1537 MB |
 
-### Delivery
+## Delivery
 
-#### Alpha Version
+### Alpha Version
 
 | Item | Detail |
 |---|---|
 | Portable Executable + Files in temp directory | Unsigned app, |
 | Update Procedure | No auto update, will notify users when they must drag and drop the new binaries in the app directory when a new update is available |
 
-#### Beta Version
+### Beta Version
 
 | Item | Detail |
 |---|---|
 | Installer | Signed MSI, silent mode `/quiet` |
 | Self-Update | Squirrel/Electron; manual trigger + auto on launch |
 
-### Maintainability
+## Maintainability
 
 | Metric / Practice | Target / Tooling |
 |---|---|
@@ -439,7 +529,7 @@ Only GitHub could require credits for running jobs and issues API, however, curr
 | Lint/format | ESLint + Prettier |
 | Docs | JSDoc + MD README per module |
 
-### Security
+## Security
 
 | Layer | Control / Standard |
 |---|---|
@@ -451,18 +541,18 @@ Only GitHub could require credits for running jobs and issues API, however, curr
 | Logging | No PII[^20]; rotation 10 MB × 5  (this means that the 5 last logs will be kept, and 6th one will overwrite the oldest) |
 | Vulnerability mgmt | `npm audit` quarterly, critical fixes < 7 days |
 
-### Compliance & Legal
+## Compliance & Legal
 
 | Domain | Measure |
 |---|---|
 | GDPR | Stores only username & email; no PII in exports or logs |
 | Licensing | All OSS[^21] packages MIT/BSD or corporate-approved |
 
-### Data Integrity
+## Data Integrity
 
 Data Integrity of the live Database by exporting the changes to a `csv`, which places the responsibility for the integrity of the data in the hands of The Company's database manager, as requested by the stakeholders. Therefore, the program will never have direct write access to The Company's assets, at least not before their explicit approval.
 
-### Accessibility & Usability
+## Accessibility & Usability
 
 | Aspect | Target |
 |---|---|
@@ -470,7 +560,7 @@ Data Integrity of the live Database by exporting the changes to a `csv`, which p
 | Colour contrast | WCAG[^22] AA ≥ 4.5 : 1 |
 | First-time task metric | User completes one Min/Max edit ≤ 5 min unassisted |
 
-### Interoperability
+## Interoperability
 
 | Integration | Protocol / Format |
 |---|---|
@@ -480,7 +570,7 @@ Data Integrity of the live Database by exporting the changes to a `csv`, which p
 | Auth | OIDC via corporate IdP[^23] |
 | GitHub | REST v3[^24] issue endpoint |
 
-### Extensibility & Configurability
+## Extensibility & Configurability
 
 The app will have to maintain a clear separation of concerns between front and back and must provide a solid foundation for later improvements as it will be developed over a year.
 
@@ -488,11 +578,11 @@ As described in the Functional Requirements, it will support multiple workflows 
 
 Hardcoding values must be avoided at all costs, in favor of constants file and loaded configs overwriting default configs.
 
-### Localization
+## Localization
 
 French is the only language considered for developing this app. No localisation necessary.
 
-### User Experience
+## User Experience
 
 Add loading animations to every > 1s load, and progress bars to mitigate the loading times and improve user experience.
 
@@ -504,9 +594,9 @@ Dark mode will be supported.
 
 # F) Functional Specifications
 
-### 1) Wireframes
+## 1) Wireframes
 
-#### Grid Layout
+### Grid Layout
 
 The main layout will use a fixed viewport that will fit to any resolution above 720p (1280x720 pixels). Below that, the app layout is not expected to render properly. The target devices always use apps in fullscreen and 1080p (1920x1080 pixels), so 1280 pixels minimum width should allow some room for viewing a slice of another window/desktop.
 
@@ -514,27 +604,27 @@ The main content block  has an all around margin of 2%, while the rest of the co
 
 ![image](https://github.com/user-attachments/assets/96fce2c6-eaf2-4a48-bb29-37ab12badd2f)
 
-#### Main Screen "Données"
+### Main Screen "Données"
 
 This is the main screen upon loading the app
 
 ![image](https://github.com/user-attachments/assets/5aea9844-c42c-41a7-9aeb-deb25b098720)
 
 
-#### Secondary Screen "Min/Max"
+### Secondary Screen "Min/Max"
 
 This screen is where the adjustments are actually made (or suggested adjustment approved depending on implementation of recommendation engine)
 
 ![image](https://github.com/user-attachments/assets/7eb4db8f-9aaf-4247-8353-579fc0dac702)
 
-#### Tertiary Screen "Export"
+### Tertiary Screen "Export"
 
 ![image](https://github.com/user-attachments/assets/3fc93689-cad2-4a49-9cfc-ce647074bf64)
 
 
-### 2) Sequence Diagrams
+## 2) Sequence Diagrams
 
-#### App launch sequence [UC-01] to [UC-08]
+### App launch sequence [UC-01] to [UC-08]
 
 > [!NOTE]
 > UC-09 onwards actually modify existing sequence as they are new "layers" or development and refinement.  The following only applies to that first stage of development (UC-01 to UC-08)
@@ -610,7 +700,7 @@ flowchart TD
     class Z,JC,NC exit;
 ```
 
-#### Scenario Detection System [UC-03]
+### Scenario Detection System [UC-03]
 
 ```mermaid
 flowchart TD
@@ -651,7 +741,7 @@ flowchart TD
     class X exit;
 ```
 
-#### Linear Regression Min/Max Adjusting System [UC-09]
+### Linear Regression Min/Max Adjusting System [UC-09]
 
 > [!NOTE]
 > This whole procedure is appended to the previous launch sequence, as is also the case for other "Could Haves" and "Should Haves" UCs
@@ -704,12 +794,12 @@ flowchart TD
     class X,Y exit;
 ```
 
-### 3) Acceptance criteria list
+## 3) Acceptance criteria list
 
 > [!TIP]
 > The goal of the acceptance criteria are to explicitly state what is expected from a successful implementation of the Use Cases, thanks to a "Given" => "When" => "Then" framework. This is the foundation of clear testing and it help bring requirements even further into the realm of specifications.  
 
-#### UC-01 - Open the application to the main screen
+### UC-01 - Open the application to the main screen
 
 | ID | Given | When | Then |
 |---|---|---|---|
@@ -717,7 +807,7 @@ flowchart TD
 | AC-01-2 | User closed app with a custom column order last session | App restarts | Same column order and filter chips are applied automatically. |
 | AC-01-3 | Server is down (three failed attempts to connect) | App starts | App gracefully crashes with "Le serveur n'a pas pu être atteint, veuillez vérifier votre connexion au réseau, ou au VPN si vous êtes à distance.". |
 
-#### UC-02 - Set Min/Max Thresholds
+### UC-02 - Set Min/Max Thresholds
 
 | ID | Given | When | Then |
 |---|---|---|---|
@@ -726,7 +816,7 @@ flowchart TD
 | AC-02-3 | Valid Min & Max entered | ✅ clicked | Row appears in Export tab and audit log line contains **oldMin, oldMax, newMin, newMax, username, timestamp**. |
 | AC-02-4 | User presses ❌ on a pending change | — | Row disappears from Export tab; original values restored in grid. |
 
-#### UC-03 - Detect Need for Adjustment
+### UC-03 - Detect Need for Adjustment
 
 | ID | Given | When | Then (tag / score) |
 |---|---|---|---|
@@ -737,21 +827,21 @@ flowchart TD
 | AC-03-5 ↑ Sales | Sum(Sales m-1…m-3) ≥ **110 %** of Sum(Sales m-13…m-15) | — | Tag = *Sales increase* and urgencyScore = 40 |
 | AC-03-6 Persistence | First analysis today has run | User re-opens app same calendar day | Previously calculated urgencyScore and row order are reused (no second analysis pass) |
 
-#### UC-04 - Filter SKU pool
+### UC-04 - Filter SKU pool
 
 | ID | Given | When | Then |
 |---|---|---|---|
 | AC-04-1 | App starts | — | Filter chips **Store A > EU > 20/80 > Permanent/New** visible and greyed out (fixed). |
 | AC-04-2 | Filter is applied | — | Row count ≤ 3 000 and all SKUs belong to Store A. |
 
-#### UC-05 - Export Thresholds to Excel
+### UC-05 - Export Thresholds to Excel
 
 | ID | Given | When | Then |
 |---|---|---|---|
 | AC-05-1 | Export tab shows ≥ 1 change | Export button clicked | Save-as dialog proposes file name `MinMax_StoreA_YYYYMMDD.xlsx`. |
 | AC-05-2 | Save completed | — | Toast **“Export réussi : n lignes”** and audit log entry with row count. |
 
-#### UC-06 - Sort Columns
+### UC-06 - Sort Columns
 
 | ID | Given | When | Then |
 |---|---|---|---|
@@ -759,7 +849,7 @@ flowchart TD
 | AC-06-2 | Same header clicked again | — | Order switches to descending, ▼ icon shown. |
 | AC-06-3 | Third click | — | Sort cleared, no icon. |
 
-#### UC-07 - Search by SKU or Supplier
+### UC-07 - Search by SKU or Supplier
 
 | ID | Given | When | Then |
 |---|---|---|---|
@@ -767,14 +857,14 @@ flowchart TD
 | AC-07-2 | Numeric “123456” typed | — | Single SKU 123456 row displayed; chip **SKU: 123456** appears. |
 | AC-07-3 | Chip cleared | — | Full filtered list (UC-04) restored. |
 
-#### UC-08 - Load Config-Based UI
+### UC-08 - Load Config-Based UI
 
 | ID | Given | When | Then |
 |---|---|---|---|
 | AC-08-1 | `config.json` contains hidden column spec `["urgencyScore"]` created on the local db | App starts | Column is not visible in grid but present in DevTools data dump. |
 | AC-08-2 | Config file corrupted | App starts | Fallback screen with error **“Config invalide, veuillez vérifier votre fichier de configuration”** and graceful crash. |
 
-#### UC-09 - Recommended Threshold Adjustment
+### UC-09 - Recommended Threshold Adjustment
 
 | ID | Given | When | Then |
 |---|---|---|---|
@@ -782,26 +872,26 @@ flowchart TD
 | AC-09-2 | User clicks ✅ on suggested row | — | Suggested Min/Max accepted and row moves to Export tab. |
 | AC-09-3 | User edits suggested value | — | Edited numbers overwrite suggestion before acceptance. |
 
-#### UC-10 - Open Decision-History File
+### UC-10 - Open Decision-History File
 
 | ID | Given | When | Then |
 |---|---|---|---|
 | AC-10-1 | History CSV exists | "**Historique**" button clicked | OS launches default CSV viewer with correct file. |
 
-#### UC-11 - Weekly Threshold-Change Notification
+### UC-11 - Weekly Threshold-Change Notification
 
 | ID | Given | When | Then |
 |---|---|---|---|
 | AC-11-1 | ≥ 1 change approved this week & last notification was ≥ 6 days ago | Notifier button clicked | Outlook draft opens with subject `Min/Max weekly digest YYYY-WW` and change list in body. |
 
-#### UC-12 - Advanced Search
+### UC-12 - Advanced Search
 
 | ID | Given | When | Then |
 |---|---|---|---|
 | AC-12-1 | User fills **Fournisseur="XXX"** **Category=7** | Appliquer clicked | Grid shows only rows matching both conditions; two chips displayed. |
 | AC-12-2 | Query returns > 1000 rows | — | Toast **“Résultat trop large – affinez la recherche”** and grid unchanged. |
 
-#### UC-13 - Visualise Key Metrics
+### UC-13 - Visualise Key Metrics
 
 | ID | Given | When | Then |
 |---|---|---|---|
@@ -809,7 +899,7 @@ flowchart TD
 | AC-13-2 | User presses ↑ | — | Charts refresh to new highlighted SKU within 2s too. |
 | AC-13-3 | User presses ESC | — | Sidebar closes and grid returns to full width. |
 
-#### UC-14 - Authenticate User
+### UC-14 - Authenticate User
 
 | ID | Given | When | Then |
 |---|---|---|---|
@@ -817,41 +907,41 @@ flowchart TD
 | AC-14-2 | “Remember me” checked | App relaunched next day | No login prompt shown (token refresh silent). |
 | AC-14-3 | Bad password | Login submitted | Error **“Identifiants invalides”** displayed; no token stored. |
 
-#### UC-15 - Authorise by Role
+### UC-15 - Authorise by Role
 
 | ID | Given | When | Then |
 |---|---|---|---|
 | AC-15-1 | Token lacks `Export` role | Export tab selected | Button **Export** is disabled and tooltip **“Accès restreint”** shown. |
 | AC-15-2 | User with `Admin` role | Attempts same | Button enabled; action proceeds. |
 
-#### UC-16 - Enhanced Urgency Ranking (Duolingo Mode)
+### UC-16 - Enhanced Urgency Ranking (Duolingo Mode)
 
 | ID | Given | When | Then |
 |---|---|---|---|
 | AC-16-1 | Mode off | Toggle switched on in "**Paramètres**" pop-up menu. | Grid re-orders so highest urgencyScore is first; rows ≥ 80 tinted red. |
 | AC-16-2 | User resolves last red row | — | Toast **“Bravo ! Tous les urgents traités”** appears with two buttons. |
 
-#### UC-17 - Customise Interface by User
+### UC-17 - Customise Interface by User
 
 | ID | Given | When | Then |
 |---|---|---|---|
 | AC-17-1 | Valid invite token | Create account flow | New user profile saved; store_default_config loaded. |
 | AC-17-2 | User reorders columns | App closed | POST `/user_config/{id}` returns 200; next login shows same order. |
 
-#### UC-18 - Show Gamification Feedback
+### UC-18 - Show Gamification Feedback
 
 | ID | Given | When | Then |
 |---|---|---|---|
 | AC-18-1 | Red row cleared | ✅ pressed | Row pops with animation and streak counter "+1" in the menu ribbon. |
 
-#### UC-19 - Submit Feedback
+### UC-19 - Submit Feedback
 
 | ID | Given | When | Then |
 |---|---|---|---|
 | AC-19-1 | GitHub token valid | Feedback panel submit | Issue created; success panel shows link to issue URL. And mention "**Vous pouvez fermer cette conversation**" |
 | AC-19-2 | API returns 401 | Submit pressed | Toast **“Authentification GitHub échouée”** and no crash. Close input window. |
 
-### 4) Column Mapping
+## 4) Column Mapping
 
 > [!NOTE]
 > This is the mapping of all the columns that were requested by the end user for their "**Données**" view. 
