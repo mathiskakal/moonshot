@@ -87,7 +87,7 @@ As every store does, it has to manage its inventory and its supply carefully if 
 
 This consideration for the supply chain is even more salient in islands like Mauritius, where goods can take from 3 to 6 months to arrive by boat, leaving no room for improvisation and reactivity.
 
-Therefore, in these parts of the world, replenishers[1] have to manage the inventory very speculatively, to anticipate seasonality, shortages, price increases, geopolitical problems.. and even import duties increasing!. Any mistake might leave the shop empty for several months.
+Therefore, in these parts of the world, replenishers[^1] have to manage the inventory very speculatively, to anticipate seasonality, shortages, price increases, geopolitical problems.. and even import duties increasing!. Any mistake might leave the shop empty for several months.
 
 Also, as the number of shops in the franchise, grows, it makes more and more sense to centralise such functions to all shops to take advantage of economies of scale and whatnot.
 
