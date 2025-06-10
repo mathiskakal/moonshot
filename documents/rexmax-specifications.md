@@ -172,7 +172,6 @@ Listening to the users and collaborators was done to the extent that I can safel
  put everything in the details below
 
 <details><summary>Raw Verbatims</summary>
-		  </details>
 
 **Success Criteria – Storemanager-A**
 
@@ -215,9 +214,12 @@ Listening to the users and collaborators was done to the extent that I can safel
 > Qualitative KPI: user teams understand how our min-max-based replenishment system works, leading to smoother supply processes.
 
 > Quantitative KPIs:
-• Zero (or minimal) stock-outs on 20/80 SKUs.
-• Optimal overall stock-out rate.
-• Optimised ordering: higher order frequencies/quantities but lower total order value.
+> Zero (or minimal) stock-outs on 20/80 SKUs.
+> Optimal overall stock-out rate.
+> Optimised ordering: higher order frequencies/quantities but lower total order value.
+
+</details>
+
 
 There are five main categories emerging from those comments/requests:
 
