@@ -13,70 +13,6 @@ Because I am both project owner and sole developer, I’ve merged what you’d n
 
 I hope that you find it informative, and that you enjoy your read.
 
-### 2) Glossary
-
-[^1]: Replenishers: The team responsible for replenishing the storage. Unlike the buying team they are not in charge of the catalog, they only coordinate replenishment.
-
-[^2]: Reorder Level: The (confusing) name given to the in-house-built order proposition system. It takes many parameters into consideraition and tries to consolodate needs from multiple shops to suggest orders that provide ecnomies of scale for the entire group. Would be better called "Order Suggestion System", but that name was already taken by a previous iteration.
-
-[^3]: The Company: The name given to the (anonymised) company I am working for.
-
-[^4]: ERP: Enterprise Resource Planner. The name given to the whole software suite that runs the company's article database, inventory tracking, cash registers and so on.
-
-[^5]: SKU: Stock-keeping unit. It is basically a unique item, designated by a unique identifier, usually a number, barcode etc.
-
-[^6]: Buyers (Role): Together with the Replenishers, they form the "Buying Team". Buyers listen to customer and store needs, find suppliers with interesting products, and initiate the first order. If the product is successful, the replenishers take over, if not, the product is abandonned.
-
-[^7]: Min/Max (used interchangeably with "thresholds"): The thresholds that have to be adjusted by store managers to feed the "Reorder Level" algorithm with the data it needs to create replenishment orders.
-
-[^8]: Discover & Define: The first two steps of the "Double Diamond" framework (Discover, Define, Develop, Deliver). Part of the design thinking philosophy.
-
-[^9]: KPI: Key performance indicator. Metrics that you follow to track your progress over time on a given goal.
-
-[^10]: HFSQL (WinDev): HFSQL is a database engine created by PCSoft, creator of the low-code environment WinDev. WinDev is a programming language and set of tools that allow development of enterprise grade software at low cost. It also happens to be the environment in which the ERP and its database are set in.
-
-[^11]: ODBC: Open Database Connectivity: ODBC is a "bridge" used to connect different databases and applications that don't necessarily speak the same language together.
-
-[^12]: Driver: A driver is the piece of software that would typically serve as a foundation for such a bridge. It usually acts as a translator between hardware and software, and even sometimes like here, between two pieces of software.
-
-[^13]: TDD mode: Test-driven development. A philosophy which consists of explicitly stating the expected result of a piece of code through a test, and once that test has been fully implemented, write the code. This philosophy forces the developer think about the design, behavior, and requirements of their code before writing it, which improves software quality at the expense of time (usually takes twice as long to code with this paradigm).
-
-[^14]: MoSCoW analysis: A simple tool that allows to prioritise different features of a product to elaborate a better plan of action.
-
-[^15]: Avg cyclomatic complexity: A software metric that quantifies the complexity of a program by counting the number of independent paths through its source code. The average value helps assess maintainability and potential risk areas in a codebase.
-
-[^16]: OIDC SSO (OpenID Connect Single Sign-On): A protocol layer on top of OAuth 2.0 that enables users to authenticate once and gain access to multiple applications. It’s widely used for implementing Single Sign-On (SSO) in modern identity management systems.
-
-[^17]: JWT (JSON Web Token): A compact, URL-safe token format used for securely transmitting claims between parties, often used for authentication and authorization in web applications.
-
-[^18]: DPAP (Data Protection Access Policy): A policy framework defining how access to sensitive data should be controlled, monitored, and enforced, often used in regulatory compliance and enterprise security contexts.
-
-[^19]: TTL (Time To Live): A limit on the lifespan of data, commonly used in caching and networking (e.g., DNS records) to determine how long information should be retained before it’s discarded or refreshed.
-
-[^20]: PII (Personally Identifiable Information): Any data that can identify an individual, such as names, addresses, or social security numbers. Protecting PII is critical for privacy and data protection regulations like GDPR or HIPAA.
-
-[^21]: OSS (Open Source Software): Software with source code that is freely available for anyone to view, modify, and distribute. OSS promotes collaboration and transparency, with licenses like MIT, GPL, and Apache defining how the code can be used and shared.
-
-[^22]: WCAG (Web Content Accessibility Guidelines): A set of internationally recognized standards for making web content more accessible to people with disabilities, published by the W3C.
-
-[^23]: IdP (Identity Provider): A service that authenticates users and provides identity information to relying applications or systems. Common in SSO setups using protocols like SAML or OIDC.
-
-[^24]: REST v3: A third version or iteration of a RESTful API, typically indicating refinements or changes in endpoint design, data structure, or supported operations while following REST principles (Representational State Transfer).
-
-[^25]: RPA (Robotic Process Automation): Technology that uses software robots to automate repetitive and rule-based tasks across systems without modifying underlying applications.
-
-[^26]: ML (Machine Learning): A subset of AI that enables computers to learn patterns from data and make decisions or predictions without being explicitly programmed.
-
-[^27]: VM (Virtual Machine): A software-based emulation of a computer system that runs an OS and applications just like a physical machine. Useful for isolation, testing, and scalable cloud infrastructure.
-
-[^28]: IPC (Inter-Process Communication): Mechanisms that allow processes to communicate and coordinate with each other, including shared memory, message passing, sockets, and more.
-
-[^29]: XSS (Cross-Site Scripting): A web security vulnerability that allows attackers to inject malicious scripts into web pages viewed by others, potentially stealing data or executing unauthorized actions.
-
-[^30]: DTO (Data Transfer Object): A design pattern used to transfer structured data between software application layers, often to simplify data transport and reduce exposure to internal models.
-
-[^31]: DOM (Document Object Model): A programming interface for web documents that represents the page structure as a tree of objects, allowing scripts to dynamically access and modify content and layout.
-
 ### 3) Project Overview (Why)
 
  Probably state that it would be better to read the project charter first, but give an overview of the project again.
@@ -2313,3 +2249,68 @@ One thing that is currently lacking for overall reliability of the product is th
 
 Finally, as already mentioned in the QA and management part, testing will come gradually, I suspect that it is going to take a good effort at some point to **flip the paradigm into a test-driven one**, **to gain the reliability and agility** of a fully modular testable enterprise-grade product.
 
+___
+
+### Glossary
+
+[^1]: Replenishers: The team responsible for replenishing the storage. Unlike the buying team they are not in charge of the catalog, they only coordinate replenishment.
+
+[^2]: Reorder Level: The (confusing) name given to the in-house-built order proposition system. It takes many parameters into consideraition and tries to consolodate needs from multiple shops to suggest orders that provide ecnomies of scale for the entire group. Would be better called "Order Suggestion System", but that name was already taken by a previous iteration.
+
+[^3]: The Company: The name given to the (anonymised) company I am working for.
+
+[^4]: ERP: Enterprise Resource Planner. The name given to the whole software suite that runs the company's article database, inventory tracking, cash registers and so on.
+
+[^5]: SKU: Stock-keeping unit. It is basically a unique item, designated by a unique identifier, usually a number, barcode etc.
+
+[^6]: Buyers (Role): Together with the Replenishers, they form the "Buying Team". Buyers listen to customer and store needs, find suppliers with interesting products, and initiate the first order. If the product is successful, the replenishers take over, if not, the product is abandonned.
+
+[^7]: Min/Max (used interchangeably with "thresholds"): The thresholds that have to be adjusted by store managers to feed the "Reorder Level" algorithm with the data it needs to create replenishment orders.
+
+[^8]: Discover & Define: The first two steps of the "Double Diamond" framework (Discover, Define, Develop, Deliver). Part of the design thinking philosophy.
+
+[^9]: KPI: Key performance indicator. Metrics that you follow to track your progress over time on a given goal.
+
+[^10]: HFSQL (WinDev): HFSQL is a database engine created by PCSoft, creator of the low-code environment WinDev. WinDev is a programming language and set of tools that allow development of enterprise grade software at low cost. It also happens to be the environment in which the ERP and its database are set in.
+
+[^11]: ODBC: Open Database Connectivity: ODBC is a "bridge" used to connect different databases and applications that don't necessarily speak the same language together.
+
+[^12]: Driver: A driver is the piece of software that would typically serve as a foundation for such a bridge. It usually acts as a translator between hardware and software, and even sometimes like here, between two pieces of software.
+
+[^13]: TDD mode: Test-driven development. A philosophy which consists of explicitly stating the expected result of a piece of code through a test, and once that test has been fully implemented, write the code. This philosophy forces the developer think about the design, behavior, and requirements of their code before writing it, which improves software quality at the expense of time (usually takes twice as long to code with this paradigm).
+
+[^14]: MoSCoW analysis: A simple tool that allows to prioritise different features of a product to elaborate a better plan of action.
+
+[^15]: Avg cyclomatic complexity: A software metric that quantifies the complexity of a program by counting the number of independent paths through its source code. The average value helps assess maintainability and potential risk areas in a codebase.
+
+[^16]: OIDC SSO (OpenID Connect Single Sign-On): A protocol layer on top of OAuth 2.0 that enables users to authenticate once and gain access to multiple applications. It’s widely used for implementing Single Sign-On (SSO) in modern identity management systems.
+
+[^17]: JWT (JSON Web Token): A compact, URL-safe token format used for securely transmitting claims between parties, often used for authentication and authorization in web applications.
+
+[^18]: DPAP (Data Protection Access Policy): A policy framework defining how access to sensitive data should be controlled, monitored, and enforced, often used in regulatory compliance and enterprise security contexts.
+
+[^19]: TTL (Time To Live): A limit on the lifespan of data, commonly used in caching and networking (e.g., DNS records) to determine how long information should be retained before it’s discarded or refreshed.
+
+[^20]: PII (Personally Identifiable Information): Any data that can identify an individual, such as names, addresses, or social security numbers. Protecting PII is critical for privacy and data protection regulations like GDPR or HIPAA.
+
+[^21]: OSS (Open Source Software): Software with source code that is freely available for anyone to view, modify, and distribute. OSS promotes collaboration and transparency, with licenses like MIT, GPL, and Apache defining how the code can be used and shared.
+
+[^22]: WCAG (Web Content Accessibility Guidelines): A set of internationally recognized standards for making web content more accessible to people with disabilities, published by the W3C.
+
+[^23]: IdP (Identity Provider): A service that authenticates users and provides identity information to relying applications or systems. Common in SSO setups using protocols like SAML or OIDC.
+
+[^24]: REST v3: A third version or iteration of a RESTful API, typically indicating refinements or changes in endpoint design, data structure, or supported operations while following REST principles (Representational State Transfer).
+
+[^25]: RPA (Robotic Process Automation): Technology that uses software robots to automate repetitive and rule-based tasks across systems without modifying underlying applications.
+
+[^26]: ML (Machine Learning): A subset of AI that enables computers to learn patterns from data and make decisions or predictions without being explicitly programmed.
+
+[^27]: VM (Virtual Machine): A software-based emulation of a computer system that runs an OS and applications just like a physical machine. Useful for isolation, testing, and scalable cloud infrastructure.
+
+[^28]: IPC (Inter-Process Communication): Mechanisms that allow processes to communicate and coordinate with each other, including shared memory, message passing, sockets, and more.
+
+[^29]: XSS (Cross-Site Scripting): A web security vulnerability that allows attackers to inject malicious scripts into web pages viewed by others, potentially stealing data or executing unauthorized actions.
+
+[^30]: DTO (Data Transfer Object): A design pattern used to transfer structured data between software application layers, often to simplify data transport and reduce exposure to internal models.
+
+[^31]: DOM (Document Object Model): A programming interface for web documents that represents the page structure as a tree of objects, allowing scripts to dynamically access and modify content and layout.
