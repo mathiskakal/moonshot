@@ -93,7 +93,7 @@ Also, as the number of shops in the franchise, grows, it makes more and more sen
 
 As this centralisation is being undertaken, software is needed to consolidate all the orders of different shops, for instance, so that they can altogether reach the minimum of order imposed by suppliers, fill an entire container to save on shipping costs, or just regroup orders to maximise their buyer/negotiating power.
 
-This software, which we will call Reorder Level[2], has been developed internally by The Company[3], who solicited me to help them with issues they have been facing with the deployment of that very software.
+This software, which we will call Reorder Level[^2], has been developed internally by The Company[^3], who solicited me to help them with issues they have been facing with the deployment of that very software.
 
 RexMax is my answer to their problems, and this is what this document will explore.
 
@@ -195,7 +195,7 @@ The original problem statement for this mission actually came from an audit cond
 
 More specifically, the tool **developed internally** "Reorder Level" to **group orders and prepare them before approval**, a process that was very lengthy before being automated **malfunctioned**, and had **burned through the store's entire annual budget in less than four months**.
 
-Why was this tool developed internally while all the other tools were developed by an IT company responsible for the ERP[4] the database and and the points of sale? The reason is quite interesting, actually: The Company had found out that this same IT company had been giving all the improvements requested (and paid for) by them, freely to their competitors.
+Why was this tool developed internally while all the other tools were developed by an IT company responsible for the ERP[^4] the database and and the points of sale? The reason is quite interesting, actually: The Company had found out that this same IT company had been giving all the improvements requested (and paid for) by them, freely to their competitors.
 
 This created a **climate of distrust**, and it's at this time that it was decided the that tool would be developed internally as a dynamic Excel spreadsheet as there are already many of them, in order to maintain the competitive edge over competitors.
 
@@ -207,15 +207,15 @@ Anyway, **the source of the problem was elsewhere**: the data being fed to this 
 
 According to user interviews I conducted with stakeholders and users, at **no point in time**, was it pedagogically **made clear, or anticipated**, that this software, while automating a tedious task for several people, **actually created more strain for specifically one person**: the store manager.
 
-The "Reorder Level" algorithm requires frequent reviews of minimum and maximum order thresholds for each SKU[5] in the store, which is between 10 000 and 30 000 items. (depending on the context). All items have a lifecycle: new items generate more sales, therefore require a bigger safety stash in inventory while other items are about to be discontinued, and need to have their ordering thresholds lowered based on many criteria as well (those are just two basic examples).
+The "Reorder Level" algorithm requires frequent reviews of minimum and maximum order thresholds for each SKU[^5] in the store, which is between 10 000 and 30 000 items. (depending on the context). All items have a lifecycle: new items generate more sales, therefore require a bigger safety stash in inventory while other items are about to be discontinued, and need to have their ordering thresholds lowered based on many criteria as well (those are just two basic examples).
 
 The cyclic nature of items means that for the "Reorder Level" program to function optimally, minimum and maximum thresholds have to be manually reviewed several times a year. Considering that there are two seasons in Mauritius, summer and winter, and that they do provoke different buying patterns, that would mean reviewing at least twenty thousand SKUs every year.
 
 This would have been the job of the replenishers previously as they were tied to specific stores, but as they have been moved up to an interstore role (they are now specialised by product categories, not stores), this task is now in the hands of... the store manager, who, you probably guessed it, is already very busy.
 
-And this is where all the problem lies. **We have an algorithm allowing the company as a whole to be perform better thanks to economies of scale**. We also have **buyers**[6]**/replenishers** that can now **spend more time finding better products and drive their decisions on actual data they have time to read**, but **now, store managers are overwhelmed with reviewing and adjusting Min/Max thresholds for several tens of thousands of items**, and they **didn't anticipate that** as they **weren't included in the development of this system**.
+And this is where all the problem lies. **We have an algorithm allowing the company as a whole to be perform better thanks to economies of scale**. We also have **buyers**[^6]**/replenishers** that can now **spend more time finding better products and drive their decisions on actual data they have time to read**, but **now, store managers are overwhelmed with reviewing and adjusting Min/Max thresholds for several tens of thousands of items**, and they **didn't anticipate that** as they **weren't included in the development of this system**.
 
-This is when I started researching about this Min/Max[7] adjustment problem, and started wondering if my solution could revolve around this problem instead.
+This is when I started researching about this Min/Max[^7] adjustment problem, and started wondering if my solution could revolve around this problem instead.
 
 And I found out that it was indeed possible to **accelerate and ease this adjustment process through software**, that the **stakeholders** and **end users** **found that idea desirable**, and that, according to my estimations, it was actually feasible to do so in the little time I have (production-ready software by July 1st, 2025).
 
@@ -227,7 +227,7 @@ Some meetings were prepared with closed questions while most of them were open-e
 
 Each meeting was followed with a consolidation session for me to extract all the useful information, proofread my notes, and prepare the next meetings.
 
-During my initial Discover & Define[8] phase which took half of my time here in Mauritius, I basically spent half of the time in meetings, and the rest of it searching for existing solutions and technologies, without engaging in any of them to avoid being to biased when deciding which path I was willing to take.
+During my initial Discover & Define[^8] phase which took half of my time here in Mauritius, I basically spent half of the time in meetings, and the rest of it searching for existing solutions and technologies, without engaging in any of them to avoid being to biased when deciding which path I was willing to take.
 
 Most of the information gathered in those meetings is synthesised in the section above and distilled throughout this document, however, I specifically asked the most important stakeholders and end users what they believed the success criteria were for my mission, in order to ground my work in evidence and be able to measure success along the way.
 
@@ -302,7 +302,7 @@ Across nearly all roles, eliminating product shortages is the dominant success s
 | *Desires* |
 |---|
 | Storemanager-B and the The Buying Team want the global *stock-out rate* tracked and driven as low as possible, with special focus on the top-100 / top-1 000 SKUs and the 20 / 80 “strategic references.” |
-| The Buying Team also wants a quantitative KPI[9] of “no (or very few) stock-outs on 20 / 80 items” plus an overall optimal stock-out rate. |
+| The Buying Team also wants a quantitative KPI[^9] of “no (or very few) stock-outs on 20 / 80 items” plus an overall optimal stock-out rate. |
 | Storemanager-A frames year-end success as making sure the 1 000 best sellers and 55 key families “are no longer problematic.” |
 
 **Tool Ease-of-Use & User Confidence**
@@ -350,12 +350,12 @@ Before starting analysing the requirements and subsequent use cases, let's first
 |---|---|
 | Cannot ask the usual software company to develop the software because of a degraded trust. | Develop in-house. |
 | There is no internal IT staff in the company, everything is externalised. Most requests take > 1 week to process and costs back-and-forth time and money. | Develop in-house by an external consultant, leverage only existing infrastructure. |
-| Existing infrastructure consists of a licensed 3rd-party obscure implementation of HFSQL (WinDEV)[10] with custom drivers to connect to it through ODBC[11]. Drivers[12] are signed to gatekeep access to db. | Use only company laptops, which all have this signed driver installed to operate the program. App won't work without reverse engineering the driver or resolving trust issues with 3rd party software maker. |
+| Existing infrastructure consists of a licensed 3rd-party obscure implementation of HFSQL (WinDEV)[^10] with custom drivers to connect to it through ODBC[^11]. Drivers[^12] are signed to gatekeep access to db. | Use only company laptops, which all have this signed driver installed to operate the program. App won't work without reverse engineering the driver or resolving trust issues with 3rd party software maker. |
 | Existing database is slow, and usually takes one minute to initiate a connection. (However once connection is established, CPU intensive queries run fine). | People are used to long loading times. They are also used to in-house dynamic excel files that take 1 min to load but run smoothly after. The program could replicate the same behavior, sync the data once a day, and work with that set throughout the day. (There is no more granular than the previous day's extraction anyway) |
 | Database integrity is key and therefore such a program's output HAS to be reviewed by the Database Manager (Company rule), who would integrate it themselves (no write access to db). | Generate an excel/csv file instead of writing changes directly. |
 | Database is inaccessible after closing times for "Maintenance" and "Extractions". | Plan any work related to the DB during work hours and all the rest outside work hours. |
 | Internal Network and even cloud services are fairly slow and unreliable | Favor local processing. |
-| The MVP has to be up and running for mid June (for two weeks of testing) and real production work starts on July 1st. | These are very tight deadlines, leaves me little over a month for development, including the two weeks of testing. Architecture and technology choice has to be spot on and careful AI delegation has to be used. Will probably not work in TDD mode[13] for time savings, and will implement unit testing later and jump to end to end tests from the get-go. I also have to arbitrate between the academic quality of my work, and its actual mission effectivity. The two are not contradictory, but aren't completely aligned either. |
+| The MVP has to be up and running for mid June (for two weeks of testing) and real production work starts on July 1st. | These are very tight deadlines, leaves me little over a month for development, including the two weeks of testing. Architecture and technology choice has to be spot on and careful AI delegation has to be used. Will probably not work in TDD mode[^13] for time savings, and will implement unit testing later and jump to end to end tests from the get-go. I also have to arbitrate between the academic quality of my work, and its actual mission effectivity. The two are not contradictory, but aren't completely aligned either. |
 
 We now know that we need to develop an application in one month, that aims to ease the process of adjusting Min/Max for the Storemanager-A. We know that it should not saturate the network more than it already is saturated and that it will sync the database locally once a day (like the company already does with its excel spreadsheets) instead of making multiple requests to the live DB.
 
@@ -363,13 +363,13 @@ As noted earlier in the user research pain points, this process is technically a
 
 I could hypothesise from this that a good starting point would be an app that solves this accessibility of data issue. This app should gather everything  the user needs to adjust their thresholds in one place, with as little friction as possible (because there could be a hundred adjustments to make at once!).
 
-After validation of this initial idea, the stakeholders and I compiled a table of features prioritised by importance thanks to a MoSCoW analysis[14]. Here are the high-level features of the product, after several weeks of meetings and brainstorming, and that were approved by the mission supervisor:
+After validation of this initial idea, the stakeholders and I compiled a table of features prioritised by importance thanks to a MoSCoW analysis[^14]. Here are the high-level features of the product, after several weeks of meetings and brainstorming, and that were approved by the mission supervisor:
 
 ### MoSCoW feature analysis
 
 | Must Have | Should Have | Could Have | Won't Have |
 |---|---|---|---|
-| • Application for setting minimum and maximum order thresholds that allows to look at the most store manager's preferred data to make informed decisions for each SKU. [UC-01], [UC-02] | • System provides actual adjustment recommendations (increase or decrease) [UC-09] | • Data visualisation on select/most important metrics to ease the eye. The goal is to allow to make quicker judgments and having less eye fatigue at the end of the day. [UC-13] | • Complete ERP suite that would fix problems tied to the current one. |
+| • Application for setting minimum and maximum order thresholds that allows to look at the most store manager's preferred data to make informed decisions for each SKU. [^UC-01], [^UC-02] | • System provides actual adjustment recommendations (increase or decrease) [UC-09] | • Data visualisation on select/most important metrics to ease the eye. The goal is to allow to make quicker judgments and having less eye fatigue at the end of the day. [UC-13] | • Complete ERP suite that would fix problems tied to the current one. |
 | • No automatic proposition for adjusting the thresholds, but detection of the necessity to adjust them, based on 4 scenarios : Surplus, Sales improvement, New product, Shortage alert. [UC-01], [UC-03] | • Have an history of all the past decisions to be able to improve judgment over time (and train an ai afterwards) [UC-10] | • Ability to authentify users, allowing for role based access control.  [UC-14], [UC-15] | • Tackling infrastructure problems (underpowered server, synchronous nature of apps which doesn't go well with the overall latency, network/VPN problems etc.) |
 | • Displayed SKUs will be a restrained to a specific subset of all store SKUs: Only SKUs for store A, of which only those who come from European suppliers, of which only those that represent the 20% in quantity that make up 80% of the sales in quantity, of which only the articles that are in "Permanent" or "New" mode, as the other modes don't require automatic resupplying. This amounts to ~~1000 SKUs. [UC-01], [UC-04] | • Notify resuppliers automatically of any threshold changes, once a week. [UC-11] | • "Duolingo mode" Automatic sorting of SKUs by importance, by weighing different criteria. SKUs would be sorted by most urgent first, and users would only have to take care of the first items to always be working on what is important.  [UC-16] | • AI-powered solution that takes automatically sets the thresholds. |
 | • Generates an excel file in Min/Max format, so that it doesn't disrupt the current threshold updating process, which is crucial to ensure database integrity. [UC-05] | • Improvement of search to include all or most relevant data [UC-12] | • Customising the interface (once testing has extended to other store managers) to take into account different methodologies. [UC-17] | • Solution that is adapted to all of the Stores upon initial releases. |
@@ -468,7 +468,7 @@ Only GitHub could require credits for running jobs and issues API, however, curr
 | Metric / Practice | Target / Tooling |
 |---|---|
 | Unit test coverage (business code) | ≥ 95 % |
-| Avg cyclomatic complexity[15] | ≤ 10 / function |
+| Avg cyclomatic complexity[^15] | ≤ 10 / function |
 | Lint/format | ESLint + Prettier |
 | Docs | JSDoc + MD README per module |
 
@@ -476,12 +476,12 @@ Only GitHub could require credits for running jobs and issues API, however, curr
 
 | Layer | Control / Standard |
 |---|---|
-| Authentication | OIDC SSO[16] → JWT[17]; “Remember me” encrypted via DPAPI[18] |
+| Authentication | OIDC SSO[^16] → JWT[^17]; “Remember me” encrypted via DPAPI[^18] |
 | Authorisation | Role claims checked client side + API enforcement |
-| Invite tokens | 192-bit random, bcrypt-hashed, TTL[19] 24 h, single-use |
+| Invite tokens | 192-bit random, bcrypt-hashed, TTL[^19] 24 h, single-use |
 | Transport | VPN + TLS 1.2 |
 | Data at rest | API keys & tokens AES-256 encrypted in config store |
-| Logging | No PII[20]; rotation 10 MB × 5  (this means that the 5 last logs will be kept, and 6th one will overwrite the oldest) |
+| Logging | No PII[^20]; rotation 10 MB × 5  (this means that the 5 last logs will be kept, and 6th one will overwrite the oldest) |
 | Vulnerability mgmt | `npm audit` quarterly, critical fixes < 7 days |
 
 ### Compliance & Legal
@@ -489,7 +489,7 @@ Only GitHub could require credits for running jobs and issues API, however, curr
 | Domain | Measure |
 |---|---|
 | GDPR | Stores only username & email; no PII in exports or logs |
-| Licensing | All OSS[21] packages MIT/BSD or corporate-approved |
+| Licensing | All OSS[^21] packages MIT/BSD or corporate-approved |
 
 ### Data Integrity
 
@@ -500,7 +500,7 @@ Data Integrity of the live Database by exporting the changes to a `csv`, which p
 | Aspect | Target |
 |---|---|
 | Keyboard navigation | Most important features accessible via keyboard. Selecting SKU, switching between panes and switching between cells. |
-| Colour contrast | WCAG[22] AA ≥ 4.5 : 1 |
+| Colour contrast | WCAG[^22] AA ≥ 4.5 : 1 |
 | First-time task metric | User completes one Min/Max edit ≤ 5 min unassisted |
 
 ### Interoperability
@@ -510,8 +510,8 @@ Data Integrity of the live Database by exporting the changes to a `csv`, which p
 | Live DB | HFSQL through ODBC (read/write) (subset of SQL) |
 | Local Cached DB | Sqlite SQL (Standard SQL) |
 | CSV export | Legacy “MinMax” schema, very basic and interoperable; History of changes in CSV as well |
-| Auth | OIDC via corporate IdP[23] |
-| GitHub | REST v3[24] issue endpoint |
+| Auth | OIDC via corporate IdP[^23] |
+| GitHub | REST v3[^24] issue endpoint |
 
 ### Extensibility & Configurability
 
@@ -974,9 +974,9 @@ Here are some of the low-code/no-code frameworks/stacks I considered.
 | **Strengths** | **Details** | **Weaknesses** | **Details** |
 |---|---|---|---|
 | Data handling | Supports large tables, custom views, easy filters/search. | Offline/desktop | Power Apps can be run offline in limited ways (mainly via mobile app; desktop is online-first). |
-| Workflow | Power Automate can handle approval flows, notifications, even emailing change logs. | ODBC/HFSQL | Direct HFSQL access is unlikely; I would need sync to Dataverse/SQL or connection via RPA[25]. |
+| Workflow | Power Automate can handle approval flows, notifications, even emailing change logs. | ODBC/HFSQL | Direct HFSQL access is unlikely; I would need sync to Dataverse/SQL or connection via RPA[^25]. |
 | Excel/CSV integration | Native Excel/CSV export/import, some scripting for custom formats. | Custom UI/UX | Not nearly as flexible as a hand-built React/Electron app. |
-| Role-based access | Tightly integrated with Azure AD. | ML[26] complexity | Only simple models are supported natively; anything advanced must go through Azure ML or external scripts. |
+| Role-based access | Tightly integrated with Azure AD. | ML[^26] complexity | Only simple models are supported natively; anything advanced must go through Azure ML or external scripts. |
 | ML integration | AI Builder for simple models or Power Automate to call Azure ML endpoints. | | |
 | UI | Modern grid controls, forms, basic charts (though less custom than React). | | |
 | Security | Enterprise-grade, audit logging, and PII handling. | | |
@@ -985,7 +985,7 @@ Here are some of the low-code/no-code frameworks/stacks I considered.
 
 80% achievable. All core data/workflows, user management, notifications, export/import, even simple regression can be handled.
 
-Showstopper: HFSQL/ODBC integration would require an intermediate sync tool or manual exports (unless I write a connector or run RPA scripts on a Windows VM[27]).
+Showstopper: HFSQL/ODBC integration would require an intermediate sync tool or manual exports (unless I write a connector or run RPA scripts on a Windows VM[^27]).
 
 Another Showstopper: The fact that it is an online-first tool, which is incompatible with the very unstable/slow network of the office, as listed in the constraints. 
 
@@ -1103,7 +1103,7 @@ Here are some **core practices** that I, or any maintainer **must respect**:
 
 | Area | Mandatory habit | Rationale |
 |---|---|---|
-| IPC[28] discipline | Expose *only* whitelisted channels in `preload.cts` (`contextIsolation: true`, `nodeIntegration: false`). | Prevent remote-code / XSS[29] from touching the filesystem. |
+| IPC[^28] discipline | Expose *only* whitelisted channels in `preload.cts` (`contextIsolation: true`, `nodeIntegration: false`). | Prevent remote-code / XSS[^29] from touching the filesystem. |
 | CPU work in workers | Long tasks (daily sync, ML fit) run in `worker_threads` or a detached Python child. | Keeps 60 fps scrolling. |
 | Single source of truth | UI never touches SQLite directly; all data mutations go through `DatabaseService` via IPC. | Guarantees audit trail & testability. |
 | Crash fencing | Each service catches and re-throws structured errors (`{code, message, cause}`) so Main can decide: retry / toast / fatal. | Coherent UX & reliable logs. |
@@ -1578,7 +1578,7 @@ Finally it is important to point out that the coding styles are also heavily inf
 
 #### Frontend: FP first
 
-Unlike Flutter or other front-end frameworks that I am used to, React uses pure functions and hooks to manipulate the components and the DOM[31], indicating that it is closer to a functional style of programming than the typical Object Oriented approach of Angular, Flutter or Vue.js.
+Unlike Flutter or other front-end frameworks that I am used to, React uses pure functions and hooks to manipulate the components and the DOM[^31], indicating that it is closer to a functional style of programming than the typical Object Oriented approach of Angular, Flutter or Vue.js.
 
 This implies several things about React front-end code:
 
