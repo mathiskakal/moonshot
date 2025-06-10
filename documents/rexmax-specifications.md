@@ -95,18 +95,6 @@ ___
 
 </details>
 
----
-
-**How to use:**  
-- Copy the entire block into your Markdown file.
-- The links will work as long as your document’s headings are unchanged.
-- On GitHub, these anchor links are case-insensitive and ignore most punctuation.
-
-Let me know if you need anchors for any additional sub-sub-sections, or want this as a collapsible block (as above) or as a flat list!
-
-
-</details>
-
 ___
 
 # A) Introduction
