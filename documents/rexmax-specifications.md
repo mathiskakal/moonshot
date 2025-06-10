@@ -1042,11 +1042,11 @@ Here are some of the low-code/no-code frameworks/stacks I considered.
 
 **Conclusion**
 
-80% achievable. All core data/workflows, user management, notifications, export/import, even simple regression can be handled.
+- 80% achievable. All core data/workflows, user management, notifications, export/import, even simple regression can be handled.
 
-Showstopper: HFSQL/ODBC integration would require an intermediate sync tool or manual exports (unless I write a connector or run RPA scripts on a Windows VM[^27]).
+- Showstopper: HFSQL/ODBC integration would require an intermediate sync tool or manual exports (unless I write a connector or run RPA scripts on a Windows VM[^27]).
 
-Another Showstopper: The fact that it is an online-first tool, which is incompatible with the very unstable/slow network of the office, as listed in the constraints. 
+- Another Showstopper: The fact that it is an online-first tool, which is incompatible with the very unstable/slow network of the office, as listed in the constraints. 
 
 > [!NOTE]
 > I could also mention [Retool](https://retool.com/) and [Google Appsheet](https://about.appsheet.com/home/) which are similar in the sense that they are online first, therefore won't be useful for us
@@ -1067,15 +1067,15 @@ Another Showstopper: The fact that it is an online-first tool, which is incompat
 
 **Conclusion**
 
-Outdated UI/UX
+- Outdated UI/UX
 
-Vendor Lock-in
+- Vendor Lock-in
 
-Automation (CI/CD), testing, and team collaboration features are less advanced, which can slow down modern development workflows and make code review or automated testing more difficult.
+- Automation (CI/CD), testing, and team collaboration features are less advanced, which can slow down modern development workflows and make code review or automated testing more difficult.
 
-Requires commercial licenses for development (and sometimes runtime), while open-source alternatives (JS/.NET/Python) are free and have larger ecosystems.
+- Requires commercial licenses for development (and sometimes runtime), while open-source alternatives (JS/.NET/Python) are free and have larger ecosystems.
 
-Limited Web/Mobile/Cloud Flexibility: If there’s any chance the project will need to become web-first, mobile, or cloud-based, WinDev will be a poor foundation—its support for these targets is less mature and less flexible than open stacks.
+- Limited Web/Mobile/Cloud Flexibility: If there’s any chance the project will need to become web-first, mobile, or cloud-based, WinDev will be a poor foundation—its support for these targets is less mature and less flexible than open stacks.
 
 For those reasons, WinDev was not retained.
 
@@ -1104,13 +1104,13 @@ There are mainly two obvious solutions from my experience and research:
 
 A very close call but:
 
-Windows-only desktop deployment
+- Windows-only desktop deployment
 
-UI modernization limitations
+- UI modernization limitations
 
-Limited native ML capabilities compared to Python
+- Limited native ML capabilities compared to Python
 
-Slower UI iteration for solo developers
+- Slower UI iteration for solo developers
 
 For those reasons, .NET was not retained
 
@@ -1131,13 +1131,13 @@ For those reasons, .NET was not retained
 
 **Conclusion**:
 
-Web and web app development technologies (Angular, Flutter, Javascript, Dart) have always been my go to languages for projects.
+- Web and web app development technologies (Angular, Flutter, Javascript, Dart) have always been my go to languages for projects.
 
-A no compromise stack that delivers great developer experience, rapid iteration and endless possibilities, at the cost of negligible higher RAM usage, given the Response/Performance target machine Specs 
+- A no compromise stack that delivers great developer experience, rapid iteration and endless possibilities, at the cost of negligible higher RAM usage, given the Response/Performance target machine Specs 
 
-Already well spoken in web technologies, so development speed will be ideal.
+- Already well-spoken in web technologies, so development speed will be ideal.
 
-Those are also the most documented technologies, which is great for AI to help with the debugging or even coding, which will definitely help with the speed!
+- Those are also the most documented technologies, which is great for AI to help with the debugging or even coding, which will definitely help with the speed!
 
 Electron doesn't enforce React, and I am more familiar with Angular or Flutter, but the ecosystem around React is more developed, and I suspect this choice will yield better results overall.
 
