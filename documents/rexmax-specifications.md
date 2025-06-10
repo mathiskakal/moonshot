@@ -93,7 +93,7 @@ Util then, a same day answer to requests, and same week intervention for less im
 
 #### Planning
 
-![Project Planning.png](../assets/Project_Planning_1749316106336_0.png){:height 1072, :width 1094}
+![image](https://github.com/user-attachments/assets/de0119f3-6d5f-46d7-9f3c-542c24076296)
 
 #### Milestones
 
@@ -171,8 +171,6 @@ Most of the information gathered in those meetings is synthesised in the section
 
 Listening to the users and collaborators was done to the extent that I can safely say that 99% of the product originates from them. In fact, only 2-3 features which come from the realm of gamification, which they had never heard of, actually came from me. All the rest was co-created with my collaborators, with ideas coming essentially from them. This was unintended at first but seeing the positive effects of listening actively the whole time, only speaking to spark a conversation, and to facilitate emergence of new ideas proved to be extremely insightful. I can confidently say that this approach will help a lot with the adoption of the product.
 
- put everything in the details below
-
 <details><summary>Raw Verbatims</summary>
 
 **Success Criteria – Storemanager-A**
@@ -220,24 +218,26 @@ Listening to the users and collaborators was done to the extent that I can safel
 > Optimal overall stock-out rate.
 > Optimised ordering: higher order frequencies/quantities but lower total order value.
 
+___
+
 </details>
 
 
 There are five main categories emerging from those comments/requests:
 
-**Stock-out reduction & availability**
+- **Stock-out reduction & availability**
 
-**Tool ease-of-use & user confidence**
+- **Tool ease-of-use & user confidence**
 
-**Data flexibility & analytical power**
+- **Data flexibility & analytical power**
 
-**Optimised ordering & financial impact**
+- **Optimised ordering & financial impact**
 
-**End-of-year milestones**
+- **End-of-year milestones**
 
 **Stock-out Reduction & Availability**
 
-Across nearly all roles, eliminating product shortages is the dominant success signal.
+*Across nearly all roles, eliminating product shortages is the dominant success signal.*
 
 | *Desires* |
 |---|
@@ -247,7 +247,7 @@ Across nearly all roles, eliminating product shortages is the dominant success s
 
 **Tool Ease-of-Use & User Confidence**
 
-Several stakeholders judge success by how the replenishment teams *feel* when they sit in front of the application.
+*Several stakeholders judge success by how the replenishment teams *feel* when they sit in front of the application.*
 
 | *Desires* |
 |---|
@@ -258,7 +258,7 @@ Several stakeholders judge success by how the replenishment teams *feel* when th
 
 **Data Flexibility & Analytical Power**
 
-A recurring pain point is the rigidity of the existing ERP system.
+*A recurring pain point is the rigidity of the existing ERP system.*
 
 | *Desires* |
 |---|
@@ -267,7 +267,7 @@ A recurring pain point is the rigidity of the existing ERP system.
 
 **Optimised Ordering & Financial Impact**
 
-Stakeholders also expect measurable business benefits beyond availability.
+*Stakeholders also expect measurable business benefits beyond availability.*
 
 | *Desires* |
 |---|
