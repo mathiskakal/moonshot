@@ -2,13 +2,24 @@ ___
 
 <h1 align="center">RexMax Specifications</h1>
 
-# A) Introduction
-
 > [!NOTE]
 > This document has been anonymised in order to comply with the customer's demands regarding the publication of source code and documents on a publicly-accessible repository. All this redacted information WILL however be revealed during presentation for a better context. Thank you in advance for your understanding.
 
 > [!CAUTION]
 > Viewing this document in dark mode might produce unreadable mermaid diagrams, it is therefore recommended to view it in light mode.
+
+___
+
+
+<details>
+<summary><em>Click to expand table of contents...</em></summary>
+
+
+</details>
+
+___
+
+# A) Introduction
 
 ### 1) Document Purpose
 
