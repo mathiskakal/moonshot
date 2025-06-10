@@ -2150,8 +2150,6 @@ There are mainly two different processes that are interesting as a developer:
 
 - `npm run dist:win`: which will compile the windows executable.
 
-The first one is for compiling the final executable, and the latter for regular development.
-
 There are other commands such as `npm dev:electron` or `npm dev:react` to get both separately, but building is so fast that there is no point in separating them, but they are available if necessary.
 
 ### NPM run dev
