@@ -7,6 +7,9 @@ ___
 > [!NOTE]
 > This document has been anonymised in order to comply with the customer's demands regarding the publication of source code and documents on a publicly-accessible repository. All this redacted information WILL however be revealed during presentation for a better context. Thank you in advance for your understanding.
 
+> [!CAUTION]
+> Viewing this document in dark mode might produce unreadable mermaid diagrams, it is therefore recommended to view it in light mode.
+
 ### 1) Document Purpose
 
 The goal of this document is to bring together every stage of thinking and decision-making behind RexMax into a single source. It aims to define the project as clearly and unambiguously as possible, while also tracing the data, reasoning, and choices that shaped that definition.
@@ -498,23 +501,25 @@ The main layout will use a fixed viewport that will fit to any resolution above 
 
 The main content block  has an all around margin of 2%, while the rest of the content is described as follows:
 
-![image.png](../assets/image_1749410060605_0.png)
+![image](https://github.com/user-attachments/assets/96fce2c6-eaf2-4a48-bb29-37ab12badd2f)
 
 #### Main Screen "Données"
 
 This is the main screen upon loading the app
 
-![image.png](../assets/image_1749410114290_0.png)
+![image](https://github.com/user-attachments/assets/5aea9844-c42c-41a7-9aeb-deb25b098720)
+
 
 #### Secondary Screen "Min/Max"
 
 This screen is where the adjustments are actually made (or suggested adjustment approved depending on implementation of recommendation engine)
 
-![image.png](../assets/image_1749410162049_0.png)
+![image](https://github.com/user-attachments/assets/7eb4db8f-9aaf-4247-8353-579fc0dac702)
 
 #### Tertiary Screen "Export"
 
-![image.png](../assets/image_1749410184688_0.png)
+![image](https://github.com/user-attachments/assets/3fc93689-cad2-4a49-9cfc-ce647074bf64)
+
 
 ### 2) Sequence Diagrams
 
@@ -2197,7 +2202,7 @@ This project, its tight deadlines and heavy constraints were to me the perfect c
 
 So this is exactly what I did: upon arriving here I **spent half of my time listening to people**, and the **other half developing and iterating**.
 
-![image.png](../assets/image_1749572745366_0.png)
+![image](https://github.com/user-attachments/assets/de0119f3-6d5f-46d7-9f3c-542c24076296)
 
 One thing I regret however, was taking out a loan to get professional training on inventory management. Half of it was great, the other half was redundant. I could have used that time on development, and that money on more relevant courses. This made me stay in France longer that I should have because I needed to wait for the next session several weeks later. I could have started this mission end of March instead of end of April. It did allow me to attend the international logistics convention in Paris, however, which was definitely a plus.
 
