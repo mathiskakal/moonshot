@@ -1,4 +1,6 @@
-# RexMax Specifications
+___
+
+<h1 align="center">RexMax Specifications</h1>
 
 # A) Introduction
 
@@ -13,7 +15,7 @@ Because I am both project owner and sole developer, I’ve merged what you’d n
 
 I hope that you find it informative, and that you enjoy your read.
 
-### 3) Project Overview (Why)
+### 2) Project Overview (Why)
 
  Probably state that it would be better to read the project charter first, but give an overview of the project again.
 
@@ -33,7 +35,7 @@ This software, which we will call Reorder Level[^2], has been developed internal
 
 RexMax is my answer to their problems, and this is what this document will explore.
 
-### 4) Project Roles (Who)
+### 3) Project Roles (Who)
 
 #### Stakeholders
 
@@ -63,7 +65,7 @@ These are other store managers, who are also concerned with the problem, but to 
 
 These are the assistants and related functions, who might have to use the software at some point because as stores are open 7 days a week, people change seats often. They are consulted for minor adjustments, global understanding and context. They are usually informed of major changes and decisions
 
-### 5) Project Methodology (How)
+### 4) Project Methodology (How)
 
 30 days of learning, of which:
 
@@ -87,7 +89,7 @@ Full release by January 2026, (all it means is that further interventions won't 
 
 Util then, a same day answer to requests, and same week intervention for less important tasks, but up to same day intervention for more urgent ones.
 
-### 6) Project Plan (When)
+### 5) Project Plan (When)
 
 #### Planning
 
