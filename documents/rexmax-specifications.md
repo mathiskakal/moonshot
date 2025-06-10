@@ -45,39 +45,39 @@ RexMax is my answer to their problems, and this is what this document will explo
 
 #### Explanation of the roles
 
-**Developer/Project Owner**
+- **Developer/Project Owner**
 
-This is me, I am in charge of developing the project on my own, with the help of all the other stakeholders.
+    - This is me, I am in charge of developing the project on my own, with the help of all the other stakeholders.
 
-**User/Validator**
+- **User/Validator**
 
-This is my only end user for this iteration. "Storemanager-A" is the store manager of Store A. Store manager translates to *Responsable d'exploitation* in french, shortened to *"Rex"*, hence "RexMax". This user is also the validator of my work, as it must be tailored to them. I am in a tight feedback loop with them. They give their approval for minor to medium changes.
+    - This is my only end user for this iteration. "Storemanager-A" is the store manager of Store A. Store manager translates to *Responsable d'exploitation* in french, shortened to *"Rex"*, hence "RexMax". This user is also the validator of my work, as it must be tailored to them. I am in a tight feedback loop with them. They give their approval for minor to medium changes.
 
-**Validator**
+- **Validator**
 
-This is the company's CEO, who wants to follow closely the progress of the mission with weekly meetings. They are accountable for this mission, and gives approval for major changes.
+    - This is the company's CEO, who wants to follow closely the progress of the mission with weekly meetings. They are accountable for this mission, and gives approval for major changes.
 
-**Consultants**
+- **Consultants**
 
-These are other store managers, who are also concerned with the problem, but to a lesser extend. They will be next to adopt the software and give feedback on it. They are consulted to get another point of view on the workflow a store manager is supposed to have. This allows me to anticipate future needs, and to work towards process uniformity which helps with the centralisation desired by The Company.
+    - These are other store managers, who are also concerned with the problem, but to a lesser extend. They will be next to adopt the software and give feedback on it. They are consulted to get another point of view on the workflow a store manager is supposed to have. This allows me to anticipate future needs, and to work towards process uniformity which helps with the centralisation desired by The Company.
 
-**Secondary Users**
+- **Secondary Users**
 
-These are the assistants and related functions, who might have to use the software at some point because as stores are open 7 days a week, people change seats often. They are consulted for minor adjustments, global understanding and context. They are usually informed of major changes and decisions
+    - These are the assistants and related functions, who might have to use the software at some point because as stores are open 7 days a week, people change seats often. They are consulted for minor adjustments, global understanding and context. They are usually informed of major changes and decisions
 
 ### 4) Project Methodology (How)
 
 30 days of learning, of which:
 
-8 days of professional training on supply chain and inventory management,
+- 8 days of professional training on supply chain and inventory management,
 
-5 days of machine learning courses,
+- 5 days of machine learning courses,
 
-14 days of autonomous learning on supply chain and inventory management.
+- 14 days of autonomous learning on supply chain and inventory management.
 
-3 days at the SITL (International Logistics Convention) to understand the state of the art in logistics and supply chain.
+- 3 days at the SITL (International Logistics Convention) to understand the state of the art in logistics and supply chain.
 
-1 month of exploration/discovery
+Then, 1 month of exploration/discovery,
 
 1 month of development (until June 20th) in 6 sprints of one week each, days of 10 a.m. until 7 p.m., 6 days a week. Due to stakeholder availability, only one sprint meeting will be held per week, which will summarise previous week achievements, and goals for ongoing week.
 
