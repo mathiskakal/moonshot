@@ -2236,7 +2236,7 @@ Other than the update considerations, all the rest of the toolchain, including t
 
 I am the sole developer of this product, with a hard jury demo in June, so I’m finishing core features first and adding deep tests once the workflow stops moving. For the MVP I just need to prove the app launches, edits thresholds and exports a file; everything else can wait. This “test-last” choice means I avoid rewriting specs every time a screen changes.
 
-- **Testing tools that I will use** (and that are already part of the stack):
+**Testing tools that I will use** (and that are already part of the stack):
 
 - **Vitest** for unit + integration tests inside Node/JS DOM.
 
