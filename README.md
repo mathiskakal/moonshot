@@ -11,4 +11,4 @@ Please read the following documentation in to learn more about this project!
 2. Run `npm install && npm run dev`
 
 > [!IMPORTANT]
-> Unfortunately, running the app will inevitably lead to a fatal error, as I haven't provided a mock database, or actual connection secrets to substitute to the connection with the production database, to which the access is restricted to company members. A full product demonstration will however be performed during presentation. Thank you for your understanding.
+> Unfortunately, running the app will inevitably lead to an error, as I haven't provided a mock database, or actual connection secrets to substitute to the connection with the production database, to which the access is restricted to company members. A full product demonstration will however be performed during presentation. Thank you for your understanding.
