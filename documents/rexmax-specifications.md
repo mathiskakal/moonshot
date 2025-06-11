@@ -2381,7 +2381,7 @@ ___
 
 ### Glossary
 
-[^1]: Replenishers: The team responsible for replenishing the storage. Unlike the buying team they are not in charge of the catalog, they only coordinate replenishment.
+[^1]: Replenishers: The team responsible for replenishing the inventory. Unlike the buying team, they are not in charge of the catalog, they only coordinate replenishment.
 
 [^2]: Reorder Level: The (confusing) name given to the in-house-built order proposition system. It takes many parameters into consideraition and tries to consolodate needs from multiple shops to suggest orders that provide ecnomies of scale for the entire group. Would be better called "Order Suggestion System", but that name was already taken by a previous iteration.
 
