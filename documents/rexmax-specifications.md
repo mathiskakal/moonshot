@@ -614,7 +614,7 @@ This screen is where the adjustments are actually made (or suggested adjustment 
 
 ## 2) Sequence Diagrams
 
-### App launch sequence [UC-01] to [UC-08]
+### App launch sequence [UC-01](#uc-01) to [UC-08](#uc-08)
 
 > [!NOTE]
 > UC-09 onwards actually modify existing sequence as they are new "layers" or development and refinement.  The following only applies to that first stage of development (UC-01 to UC-08)
@@ -690,7 +690,7 @@ flowchart TD
     class Z,JC,NC exit;
 ```
 
-### Scenario Detection System [UC-03]
+### Scenario Detection System [UC-03](#uc-03)
 
 ```mermaid
 flowchart TD
@@ -731,7 +731,7 @@ flowchart TD
     class X exit;
 ```
 
-### Linear Regression Min/Max Adjusting System [UC-09]
+### Linear Regression Min/Max Adjusting System [UC-09](#uc-09)
 
 > [!NOTE]
 > This whole procedure is appended to the previous launch sequence, as is also the case for other "Could Haves" and "Should Haves" UCs
@@ -1962,7 +1962,7 @@ Please note that the header row is not expected, only the data is.
 
 ## Algorithm Selection
 
-The only part of the program that (for now) requires algorithmic consideration is [UC-09], the recommendation engine.
+The only part of the program that (for now) requires algorithmic consideration is [UC-09](#uc-09), the recommendation engine.
 
 First of all, I would like to state that I am in no means knowledgeable in AI/ML as I have only followed a one week course on the fundamentals, from the intuition that it might be useful for this program.
 
@@ -2076,7 +2076,7 @@ app.on('ready', async () => {
 
 For the first iteration of the app, following [Electron's Security Guidelines](https://www.electronjs.org/docs/latest/tutorial/security) and running `npm audit` once a week should suffice. Steps to prevent CSRF or XSS attacks have already been taken, and the architecture is already enforcing context isolation through IPC and serialisation of data transfer objects.
 
-The app's only connection to the outside world, is through the GitHub API, to publish Issues for [UC-19].
+The app's only connection to the outside world, is through the GitHub API, to publish Issues for [UC-19](#uc-19).
 
 However, it is good to anticipate risks for future iterations, this is why I made this simple Attack Threat Model, which shows the main attack surface, and potential bad actors to look out for:
 
