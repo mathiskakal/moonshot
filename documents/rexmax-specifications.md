@@ -6,7 +6,7 @@ ___
 > This document has been anonymised in order to comply with the customer's demands regarding the publication of source code and documents on a publicly-accessible repository. All this redacted information WILL however be revealed during presentation for a better context. Thank you in advance for your understanding.
 
 > [!CAUTION]
-> Viewing this document in dark mode might produce unreadable mermaid diagrams, it is therefore recommended to view it in light mode.
+> Viewing this document in dark mode might produce hard-to-read mermaid diagrams, it is therefore recommended to view it in light mode.
 
 ___
 
@@ -101,28 +101,28 @@ ___
 
 ### 1) Document Purpose
 
-The goal of this document is to bring together every stage of thinking and decision-making behind RexMax into a single source. It aims to define the project as clearly and unambiguously as possible, while also tracing the data, reasoning, and choices that shaped that definition.
+The goal of this document is to bring together every stage of thinking and decision-making behind RexMax into a single source. It aims to define the project as clearly and unambiguously as possible, while also tracing the data, reasoning and choices that shaped that definition.
 
 Because I am both project owner and sole developer, I’ve merged what you’d normally find across multiple reports: UX research, business-requirements analysis, functional, technical details, testing activity as well as management artefacts into one comprehensive document intended for the Jury and myself.
 
-I hope that you find it informative, and that you enjoy your read.
+I hope that you find it informative, and that you enjoy your read!
 
 ### 2) Project Overview (Why)
 
 > [!IMPORTANT]
-> Reading the project charter located in the same folder could help gain additional context, as it is the document that served as a contract between I, the project owner, and the customer.
+> Reading the [project charter](https://github.com/mathiskakal/moonshot/blob/449d1da29e50db165bf9437e2a1a5f0830aeae0a/documents/project-charter.md) located in the same folder could help gain additional context, as it is the document that served as a contract between I, the project owner, and the customer.
 
 RexMax is the name I have given to this project: an application, destined to solve a problem that are currently facing store owners of a home improvement franchise abroad, in Mauritius Island.
 
-As every store does, it has to manage its inventory and its supply carefully if it wants to avoid shortages and surpluses, which are both situations that cost a lot in their own ways.
+As every store does, it has to manage its inventory and its supply carefully if it wants to avoid shortages and surpluses, which are both situations that cost a lot, each in their own ways.
 
 This consideration for the supply chain is even more salient in islands like Mauritius, where goods can take from 3 to 6 months to arrive by boat, leaving no room for improvisation and reactivity.
 
 Therefore, in these parts of the world, replenishers[^1] have to manage the inventory very speculatively, to anticipate seasonality, shortages, price increases, geopolitical problems.. and even import duties increasing!. Any mistake might leave the shop empty for several months.
 
-Also, as the number of shops in the franchise, grows, it makes more and more sense to centralise such functions to all shops to take advantage of economies of scale and whatnot.
+Also, as the number of shops in the franchise, grows, it makes more and more sense to consolidate such roles to all shops to take advantage of economies of scale among other reasons.
 
-As this centralisation is being undertaken, software is needed to consolidate all the orders of different shops, for instance, so that they can altogether reach the minimum of order imposed by suppliers, fill an entire container to save on shipping costs, or just regroup orders to maximise their buyer/negotiating power.
+As this centralisation is being undertaken, software is needed to consolidate the orders of all the different shops, for instance, so that they can as a whole reach the minimum of order imposed by suppliers, fill an entire container to save on shipping costs, or just regroup orders to maximise their buyer/negotiating power.
 
 This software, which we will call Reorder Level[^2], has been developed internally by The Company[^3], who solicited me to help them with issues they have been facing with the deployment of that very software.
 
@@ -142,26 +142,26 @@ RexMax is my answer to their problems, and this is what this document will explo
 
     - This is me, I am in charge of developing the project on my own, with the help of all the other stakeholders.
 
-- **User/Validator**
+- **User/Supervisor**
 
     - This is my only end user for this iteration. "Storemanager-A" is the store manager of Store A. Store manager translates to *Responsable d'exploitation* in french, shortened to *"Rex"*, hence "RexMax". This user is also the validator of my work, as it must be tailored to them. I am in a tight feedback loop with them. They give their approval for minor to medium changes.
 
 - **Validator**
 
-    - This is the company's CEO, who wants to follow closely the progress of the mission with weekly meetings. They are accountable for this mission, and gives approval for major changes.
+    - This is the company's CEO, who wants to follow closely the progress of the mission with weekly meetings. They are accountable for this mission, and give their approval for major changes.
 
 - **Consultants**
 
-    - These are other store managers, who are also concerned with the problem, but to a lesser extend. They will be next to adopt the software and give feedback on it. They are consulted to get another point of view on the workflow a store manager is supposed to have. This allows me to anticipate future needs, and to work towards process uniformity which helps with the centralisation desired by The Company.
+    - These are other store managers, who are also concerned with the problem, but to a lesser extent. They will be next to adopt the software and give feedback on it. They are consulted to get another point of view on the ideal workflow a store manager is supposed to have. This allows me to anticipate future needs and to work towards process uniformity which helps with the centralisation desired by The Company.
 
 - **Secondary Users**
 
-    - These are the assistants and related functions, who might have to use the software at some point because as stores are open 7 days a week, people change seats often. They are consulted for minor adjustments, global understanding and context. They are usually informed of major changes and decisions
+    - These are the assistants and related functions, who might have to use the software at some point because as stores are open 7 days a week and people change seats often. They are consulted for minor adjustments, global understanding and context. They are usually informed of major changes and decisions
 
 ### 4) Project Methodology (How)
 
 > [!NOTE]
-> This part has already been covered in the project charter. It is also here for accessibility.
+> This part has already been covered in the [project charter](https://github.com/mathiskakal/moonshot/blob/449d1da29e50db165bf9437e2a1a5f0830aeae0a/documents/project-charter.md#methodology). It is also here for accessibility.
 
 30 days of learning, of which:
 
@@ -188,7 +188,7 @@ Util then, a same day answer to requests, and same week intervention for less im
 ### 5) Project Plan (When)
 
 > [!NOTE]
-> This part has already been covered in the project charter. It is also here for accessibility.
+> This part has already been covered in the [project charter](https://github.com/mathiskakal/moonshot/blob/449d1da29e50db165bf9437e2a1a5f0830aeae0a/documents/project-charter.md#5-project-plan-when). It is also here for accessibility.
 
 #### Planning
 
@@ -216,29 +216,27 @@ Util then, a same day answer to requests, and same week intervention for less im
 
 | Name | Type | Deadline | Goal | Link |
 |---|---|---|---|---|
-| Project Charter | Document (markdown) | May 8th, 2025 | This document aims to ensure alignment with stakeholders and agree on the problem to tackle, high level objectives, methodology and planning, prior to developing the actual solution. | |
-| RexMax Specifications (this document) | Document (markdown) | June 8th, 2025 | This document aims to provide insights on the whole thought and development process of the product. | |
-| RexMax Jury Version 0.1.0 (App foundations) | Code Repository | June 8th, 2025 | Provide the foundation of the program for it to be assessed by the jury. | |
-| RexMax Alpha Version | Binary Executable | June 20th, 2025 | Provide the MVP of the app, which will kickoff alpha testing. | |
-| RexMax Beta Version | Binary Executable | June 31st, 2025 | Provide the version of the program which willl be battle tested in the crucial period of July. | |
+| Project Charter | Document (markdown) | May 8th, 2025 | This document aims to ensure alignment with stakeholders and agree on the problem to tackle, high level objectives, methodology and planning, prior to developing the actual solution. | [Link] |
+| RexMax Specifications (this document) | Document (markdown) | June 8th, 2025 | This document aims to provide insights on the whole thought and development process of the product. | *This Document* |
+| RexMax Jury Version 0.1.0 (App foundations) | Code Repository | June 8th, 2025 | Provide the foundation of the program for it to be assessed by the jury. | Build the project locally from the [master branch](https://github.com/mathiskakal/moonshot/tree/master) |
+| RexMax Alpha Version | Binary Executable | June 20th, 2025 | Provide the MVP of the app, which will kickoff alpha testing. | *Will be available in the releases feed* |
+| RexMax Beta Version | Binary Executable | June 31st, 2025 | Provide the version of the program which willl be battle tested in the crucial period of July. | *Will be available in the releases feed* |
 
 # B) Business Requirements
 
-I was first contacted for this mission in end of February 2025, when I didn't have yet the opportunity to come to Mauritius, so I used that time to learn about supply chain management, inventory management and logistics in general.
+I was first contacted for this mission in end of February 2025, when I didn't have yet the opportunity to come to Mauritius, so I used that time to learn about supply-chain management, inventory management and logistics in general.
 
-Upon arriving for the project kickoff, on April 14th, 2025, I decided to use half of my time in Mauritius to meet all the stakeholders, the end users, the validators and consultants in order to get as much context as I could for this mission, and this proved very insightful as it allowed me to completely reframe the project as explained below.
+Upon arriving for the project kickoff, on April 14th, 2025, I decided to use half of my time in Mauritius to meet all the stakeholders, the end users, the validators and consultants in order to get as much context as I could for this mission. This proved very insightful as it allowed me to completely reframe the project as I will explain below.
 
 The original problem statement for this mission actually came from an audit conducted by the headquarters of The Company, based in France. They listed a number of issues, and most of them were related to shortages and all the negative consequences they have on the finances of a store.
 
-More specifically, the tool **developed internally** "Reorder Level" to **group orders and prepare them before approval**, a process that was very lengthy before being automated **malfunctioned**, and had **burned through the store's entire annual budget in less than four months**.
+More specifically, the tool **developed internally** "Reorder Level" to **group orders and prepare them before approval**, a process that was very lengthy before being automated, **malfunctioned**, and had **burned through the store's entire annual budget in less than four months**.
 
 Why was this tool developed internally while all the other tools were developed by an IT company responsible for the ERP[^4] the database and and the points of sale? The reason is quite interesting, actually: The Company had found out that this same IT company had been giving all the improvements requested (and paid for) by them, freely to their competitors.
 
 This created a **climate of distrust**, and it's at this time that it was decided the that tool would be developed internally as a dynamic Excel spreadsheet as there are already many of them, in order to maintain the competitive edge over competitors.
 
-After interviewing the author of the tool and all of its users, I realised that there were **several problems surrounding the software**, but **none inherently due to the software**. In fact, I believe that the software is actually very good at doing what is meant to do, and I am impressed that an Excel spreadsheet can succeed in achieving this complex task, and that people working in the accounting department are actually great programmers! (even though, they are using Excel...).
-
-To be frank, given the time that I have (little under a month of development until presentation deadline), I am glad that I don't have to tackle this problem, because I still want to deliver something auditable for my presentation, even though disappointing The Company would be a worse outcome to me, as I can attempt presenting my project again later too, and I would like to keep on working for them.
+After interviewing the author of the tool and all of its users, I realised that there were **several problems surrounding the software**, but **none inherently due to the software**. In fact, I believe that the software is actually very good at doing what is meant to do, and I am impressed that an Excel spreadsheet can succeed in achieving this complex task, and that people working in the accounting department are actually great programmers! (even though, they are using Excel!).
 
 Anyway, **the source of the problem was elsewhere**: the data being fed to this "Reorder Level" order management program. Indeed, there was a drawback to developing the software in house: it is that no one has ever created, nor deployed software before, and **the problems were** in fact, **due to its deployment**.
 
@@ -258,9 +256,9 @@ And I found out that it was indeed possible to **accelerate and ease this adjust
 
 # C) User Research
 
-A total of 31 meetings have been conducted with a total of 18 people.
+31 meetings have been conducted with a total of 18 people.
 
-Some meetings were prepared with closed questions while most of them were open-ended, and aimed at collecting as much information about the current processes and other hidden causes that could hinder The Company's efforts as I could.
+Some meetings were prepared with closed questions while most of them were open-ended, and aimed at collecting as much information as I could about the current processes and other hidden causes that could hinder The Company's efforts.
 
 Each meeting was followed with a consolidation session for me to extract all the useful information, proofread my notes, and prepare the next meetings.
 
@@ -268,9 +266,13 @@ During my initial Discover & Define[^8] phase which took half of my time here in
 
 Most of the information gathered in those meetings is synthesised in the section above and distilled throughout this document, however, I specifically asked the most important stakeholders and end users what they believed the success criteria were for my mission, in order to ground my work in evidence and be able to measure success along the way.
 
-Listening to the users and collaborators was done to the extent that I can safely say that 99% of the product originates from them. In fact, only 2-3 features which come from the realm of gamification, which they had never heard of, actually came from me. All the rest was co-created with my collaborators, with ideas coming essentially from them. This was unintended at first but seeing the positive effects of listening actively the whole time, only speaking to spark a conversation, and to facilitate emergence of new ideas proved to be extremely insightful. I can confidently say that this approach will help a lot with the adoption of the product.
+Listening to the users and collaborators was done to the extent that I can safely say that 99% of the product originates from them. In fact, only 2-3 features which come from the realm of gamification, actually came from me. All the rest was co-created with my collaborators, with ideas coming essentially from them.
 
-<details><summary>Raw Verbatims</summary>
+This was unintended at first but seeing the positive effects of listening actively the whole time, only speaking to spark a conversation, and to facilitate emergence of new ideas proved to be extremely insightful.
+
+I can confidently say that this approach will help a lot with the adoption of the product.
+
+<details><summary>*Click to reveal the raw verbatims*</summary>
 
 **Success Criteria – Storemanager-A**
 
@@ -322,7 +324,7 @@ ___
 </details>
 
 
-There are five main categories emerging from those comments/requests:
+There are five main categories that emerge from those comments/requests:
 
 - **Stock-out reduction & availability**
 
@@ -399,7 +401,7 @@ Before starting analysing the requirements and subsequent use cases, let's first
 | Internal Network and even cloud services are fairly slow and unreliable | Favor local processing. |
 | The MVP has to be up and running for mid June (for two weeks of testing) and real production work starts on July 1st. | These are very tight deadlines, leaves me little over a month for development, including the two weeks of testing. Architecture and technology choice has to be spot on and careful AI delegation has to be used. Will probably not work in TDD mode[^13] for time savings, and will implement unit testing later and jump to end to end tests from the get-go. I also have to arbitrate between the academic quality of my work, and its actual mission effectivity. The two are not contradictory, but aren't completely aligned either. |
 
-We now know that we need to develop an application in one month, that aims to ease the process of adjusting Min/Max for the Storemanager-A. We know that it should not saturate the network more than it already is saturated and that it will sync the database locally once a day (like the company already does with its excel spreadsheets) instead of making multiple requests to the live DB.
+We now know that we need to develop an application in one month, that aims to ease the process of adjusting Min/Max for the Storemanager-A. We know that it should not saturate the network more than it already is, and that it will sync the database locally once a day (like the company already does with its excel spreadsheets) instead of making multiple requests to the live DB.
 
 As noted earlier in the user research pain points, this process is technically already feasible, but requires advanced searching and filtering, switching between windows and models, and relying on an app that runs in a slow virtual machine. From one of my user interviews I noted that this created a lot of friction and completely discouraged the store managers from doing this task. (Along with not being instructed that it had to be done when "Reorder Level" was rolled out, of course.)
 
@@ -412,8 +414,8 @@ After validation of this initial idea, the stakeholders and I compiled a table o
 | Must Have | Should Have | Could Have | Won't Have |
 |---|---|---|---|
 | • Application for setting minimum and maximum order thresholds that allows to look at the most store manager's preferred data to make informed decisions for each SKU. [UC-01], [UC-02] | • System provides actual adjustment recommendations (increase or decrease) [UC-09] | • Data visualisation on select/most important metrics to ease the eye. The goal is to allow to make quicker judgments and having less eye fatigue at the end of the day. [UC-13] | • Complete ERP suite that would fix problems tied to the current one. |
-| • No automatic proposition for adjusting the thresholds, but detection of the necessity to adjust them, based on 4 scenarios : Surplus, Sales improvement, New product, Shortage alert. [UC-01], [UC-03] | • Have an history of all the past decisions to be able to improve judgment over time (and train an ai afterwards) [UC-10] | • Ability to authentify users, allowing for role based access control.  [UC-14], [UC-15] | • Tackling infrastructure problems (underpowered server, synchronous nature of apps which doesn't go well with the overall latency, network/VPN problems etc.) |
-| • Displayed SKUs will be a restrained to a specific subset of all store SKUs: Only SKUs for store A, of which only those who come from European suppliers, of which only those that represent the 20% in quantity that make up 80% of the sales in quantity, of which only the articles that are in "Permanent" or "New" mode, as the other modes don't require automatic resupplying. This amounts to ~~1000 SKUs. [UC-01], [UC-04] | • Notify resuppliers automatically of any threshold changes, once a week. [UC-11] | • "Duolingo mode" Automatic sorting of SKUs by importance, by weighing different criteria. SKUs would be sorted by most urgent first, and users would only have to take care of the first items to always be working on what is important.  [UC-16] | • AI-powered solution that takes automatically sets the thresholds. |
+| • No automatic proposition for adjusting the thresholds, but detection of the necessity to adjust them, based on 4 scenarios : Surplus, Sales improvement, New product, Shortage alert. [UC-01], [UC-03] | • Have an history of all the past decisions to be able to improve judgment over time (and train an ai afterwards) [UC-10] | • Ability to authenticate users, allowing for role based access control.  [UC-14], [UC-15] | • Tackling infrastructure problems (underpowered server, synchronous nature of apps which doesn't go well with the overall latency, network/VPN problems etc.) |
+| • Displayed SKUs will be restricted to a specific subset of all store SKUs: Only SKUs for store A, of which only those who come from European suppliers, of which only those that represent the 20% in quantity that make up 80% of the sales in quantity, of which only the articles that are in "Permanent" or "New" mode, as the other modes don't require automatic resupplying. This amounts to ~~1000 SKUs. [UC-01], [UC-04] | • Notify resuppliers automatically of any threshold changes, once a week. [UC-11] | • "Duolingo mode" Automatic sorting of SKUs by importance, by weighing different criteria. SKUs would be sorted by most urgent first, and users would only have to take care of the first items to always be working on what is important.  [UC-16] | • AI-powered solution that takes automatically sets the thresholds. |
 | • Generates an excel file in Min/Max format, so that it doesn't disrupt the current threshold updating process, which is crucial to ensure database integrity. [UC-05] | • Improvement of search to include all or most relevant data [UC-12] | • Customising the interface (once testing has extended to other store managers) to take into account different methodologies. [UC-17] | • Solution that is adapted to all of the Stores upon initial releases. |
 | • Basic column sorting (ascending or descending) and search by SKU and supplier. [UC-06], [UC-07] | | • Gamification elements, such as notifications/reminders and "visual accomplishments feedback" to encourage averaging out the setting of the thresholds throughout the year, rather than all at once. [UC-18] | |
 | • Config-based interface, however, no config tool, therefore interface isn't customisable yet. [UC-08] | | • Built-in feedback form to support the rapid iteration process and to allow users to directly submit tickets for feature improvements, bugs or simple requests through the app interface. [UC-19] | |
@@ -455,7 +457,7 @@ After validation of this initial idea, the stakeholders and I compiled a table o
 # E) Non-Functional Requirements
 
 > [!IMPORTANT]
-> Those requirements are generally for the full release of the app, and cannot be expected from its first iterations. Iteration of the product will help build towards the following standards of quality.
+> Those requirements are mainly for the full release of the app, and cannot be expected from its first iterations. Iterating on the product will help build towards the following standards of quality.
 
 ## Costs
 
@@ -1024,7 +1026,7 @@ flowchart TD
 
 ## Technology Stack
 
-First question that I asked myself: are there no code/low code tools fit for the task and that could accelerate development without compromising on features?
+The first question that I asked myself: are there no code/low code tools fit for the task and that could accelerate development without compromising on features?
 
 Here are some of the low-code/no-code frameworks/stacks I considered.
 
@@ -1049,7 +1051,7 @@ Here are some of the low-code/no-code frameworks/stacks I considered.
 - Another Showstopper: The fact that it is an online-first tool, which is incompatible with the very unstable/slow network of the office, as listed in the constraints. 
 
 > [!NOTE]
-> I could also mention [Retool](https://retool.com/) and [Google Appsheet](https://about.appsheet.com/home/) which are similar in the sense that they are online first, therefore won't be useful for us
+> I could also mention [Retool](https://retool.com/) and [Google Appsheet](https://about.appsheet.com/home/) which are similar in the sense that they are online first, therefore won't be useful to us
 
 ### 2. WinDev
 
@@ -1081,7 +1083,7 @@ For those reasons, WinDev was not retained.
 
 Therefore, none of them really meet my criteria usually because of a sense of lock in, slow prototyping, outdated UI/UX and poor interoperability.
 
-Now that those are out of the way, let's evaluate the full-code ecosystems, or as I like to call them, the "yes code"!
+Now that those are out of the way, let's evaluate the full-code ecosystems!
 
 There are mainly two obvious solutions from my experience and research:
 
@@ -1139,7 +1141,7 @@ For those reasons, .NET was not retained
 
 - Those are also the most documented technologies, which is great for AI to help with the debugging or even coding, which will definitely help with the speed!
 
-Electron doesn't enforce React, and I am more familiar with Angular or Flutter, but the ecosystem around React is more developed, and I suspect this choice will yield better results overall.
+Electron doesn't enforce React, and I am more familiar with Angular, but the ecosystem around React is more developed, and I suspect this choice will yield better results overall.
 
 ### 5. Final Stack Choice
 
@@ -1932,7 +1934,7 @@ newMax		// The user set Max
 ```
 
 > [!IMPORTANT]
-Please note that the header row is not expected, only the data.
+Please note that the header row is not expected, only the data is.
 
 ### History CSV
 
@@ -1960,7 +1962,7 @@ Please note that the header row is not expected, only the data is.
 
 ## Algorithm Selection
 
-The only part of the program that (for now) requires algorithmic consideration is UC-09, the recommendation engine.
+The only part of the program that (for now) requires algorithmic consideration is [UC-09], the recommendation engine.
 
 First of all, I would like to state that I am in no means knowledgeable in AI/ML as I have only followed a one week course on the fundamentals, from the intuition that it might be useful for this program.
 
@@ -2072,9 +2074,9 @@ app.on('ready', async () => {
 
 ## Security Design
 
-For the first iteration of the app, following [Electron's Security Guidelines](https://www.electronjs.org/docs/latest/tutorial/security) and running `npm audit` once a week should suffice. Steps to prevent ^^CSRF or XSS attacks^^ have already been taken, and the architecture is already enforcing context isolation through IPC and serialisation of data transfer objects.
+For the first iteration of the app, following [Electron's Security Guidelines](https://www.electronjs.org/docs/latest/tutorial/security) and running `npm audit` once a week should suffice. Steps to prevent CSRF or XSS attacks have already been taken, and the architecture is already enforcing context isolation through IPC and serialisation of data transfer objects.
 
-The app's only connection to the outside world, is through the GitHub API, to publish Issues for UC-19.
+The app's only connection to the outside world, is through the GitHub API, to publish Issues for [UC-19].
 
 However, it is good to anticipate risks for future iterations, this is why I made this simple Attack Threat Model, which shows the main attack surface, and potential bad actors to look out for:
 
@@ -2216,7 +2218,7 @@ graph TD
 
 As of now, every time a test is performed with the user, they download the latest minor version from the GitHub repo on the dev branch.
 
-However, the already present **electron-builder** module features **electron-updater**, which allows:
+However, the already present **electron-builder** module features **electron-updater** allows:
 
 1. GitHub Releases Support Out-of-the-Box: Auto-update from a GitHub repository using public or private releases with minimal configuration. It handles version checking and downloading automatically.
 
@@ -2254,7 +2256,7 @@ Manual smoke list (≈ 15 min) that covers login, grid load, Min/Max edit and CS
 
 I jot down the result in a simple markdown report and push it next to the code; no CI yet.
 
-**How I write acceptance criteria**: Every user story carries its own "Given / When / Then"  table, and ther IDs live in a single section of the spec so I can point tests at them directly.
+**How I write acceptance criteria**: Every use case carries its own "Given / When / Then"  table, and their IDs live in a single section of the spec so I can point tests at them directly.
 
 **Growing the testing pyramid through 2025**
 
@@ -2279,11 +2281,11 @@ No monitoring/telemetry; crashes go to a local log that I review on my own.
 > [!NOTE]
 This section is a bit of a post mortem (commentary on past actions), as most of the important decisions have already been taken, but I will hint at the future in the next section to integrate what I have learned from my decisions and actions.
 
-Like many software projects, we don't suspect how much coding does not represent the majority of time spent to solve problems. Documentation, management, and most of all human interactions are all integral parts of it and even take more time that the development itself.
+Like many software projects, we don't suspect how much coding does not represent the majority of time spent to solve problems. Documentation, management, and most of all human interactions are all integral parts of it and even take more time than the actual build of the solution.
 
 ## General organisation
 
-I have always been attracted to **agile development** and **rapid iteration** (sprint) cycles, as it feels like a healing protocol, as I usually get lost in premature optimisation and always push back implementation because of being scared of failure.
+I have always been attracted to **agile development** and **rapid iteration** (sprint) cycles, as it feels like a healing protocol, to avoid geting lost in premature optimisation as I tend to always push back implementation because of being scared of failure.
 
 This project, its tight deadlines and heavy constraints were to me the perfect conditions to experiment with that. I did, however keep some notions of the "waterfall" method, because my go-to **Design Thinking framework, Discover => Define => Develop => Deliver**, does hint that thinking represents half of the time.
 
@@ -2297,13 +2299,13 @@ In order to avoid wasting time and money again next time, I will ask a professio
 
 ## Notes on the communication with Stakeholders
 
-As mentioned in the user research , communication was the great highlight of this mission. I established tight relationships with stakeholders, users and future users, and they are truly the ones who have thought out the solution, as I was only gathering their insights. It is the first time that I experience things going that way, but I am convinced that this is the best way that I had yet to try to build a product — as long as collaborators are truthful too, of course. This does however require more time spent in meetings, which I was lucky people didn't mind doing.
+As mentioned in the user research , communication was the great highlight of this mission. I established tight relationships with stakeholders, users and future users, and they are truly the ones who have thought out the solution, as I was only gathering their insights. It is the first time that I experience things going that way, but I am convinced that this is the best way that I had yet to try to build a product — as long as collaborators are truthful too, of course. This does however require more time spent in meetings, but I was lucky people didn't mind that.
 
-It seems that my presence also solved an internal communication problem, where people were starting to wonder if they weren't the one's causing the problems, bringing a lot of self-doubt and loss of self-confidence. My insights allowed them to understand that the deployment of the previous solutions wasn't done correctly, and that this situation was almost inevitable given the constraints.
+It seems that my presence also solved an internal communication problem, as people were starting to wonder if they weren't the ones causing the shortage problems, bringing a lot of self-doubt and loss of self-confidence. My insights allowed them to understand that the deployment of the previous solutions wasn't done correctly, and that this situation was almost inevitable given the constraints.
 
 Once the development started, I met stakeholders at least once a week to give them a report on the previous week and plan the coming one. The stakeholders were very involved and please to be kept in the loop, even the CEO, who would drive half an hour from their usual workplace to attend the sprint meeting, even when there was no decision involved.
 
-I am also very thankful for meeting extended circles of stakeholders as some provided very precious help and already hinted me on a potential next problem to tackle.
+I am also very thankful for meeting extended circles of stakeholders as some provided very precious help and already hinted me on potential next problems to tackle.
 
 ## Notes on AI methodology
 
@@ -2321,7 +2323,7 @@ This is a point that is often overlooked, but I knew from the get go that reliab
 
 5. AI for *Vibe Coding*: “Create an app that solves problem X for user Y.”  Opens wild new possibilities, but QA effort climbs fast.
 
-In this scale, I was globally on level 2 and sometimes tried level 3, with mixed results.
+In this scale, I was mainly on levels 2 and sometimes 3 (with mixed results).
 
 For writing this document, I essentially used AI for research, rephrasing sentences that sounded too repetitive, formatting data into markdown tables (very handy!) and probably the best use case: generating mermaid diagrams!
 
@@ -2337,15 +2339,15 @@ Unfortunately there also have been misses in this project.
 
 My original architecture choice was monolithic, based on the (wrong) assumption that it would allow me to iterate faster.
 
-This was very problematic when I discovered during the development of the app, that the production database was closed after working hours (another wrong assumption, which is that enterprise database are necessarily up 99.9% of the time). I found myself having to display tables from: A remote table, a local table, a test mock and a temporary mock to compensate from the lack of db. My monolith was simply not modular enough to combine all of those. That is when I scrapped all of the code after two weeks of development, made some research about common architectures and patterns for similar React + Backend projects. That is when I settled for the current services-oriented, layered architecture I have currently. This meant that I had to rewrite most of the specs as well too, and had to announce it to the stakeholders too, who were supportive thankfully.
+This was very problematic when I discovered during the development of the app, that the production database was closed after working hours (another wrong assumption, which is that enterprise databases are necessarily up 99.9% of the time). I found myself having to display tables from: A remote table, a local table, a test mock and a temporary mock to compensate from the lack of db. My monolith was simply not modular enough to combine all of those. That is why I scrapped all of the code after two weeks of development, made some research about common architectures and patterns for similar React + Backend projects. That is when I settled for the current services-oriented, layered architecture I have currently. This meant that I had to rewrite most of the specs as well too, and had to announce it to the stakeholders too, who were supportive thankfully.
 
 Next time I will search for an architecture first!
 
 I was also too optimistic with the rapid iteration of the product and thought it was a good idea to test it with the user before having an MVP. That also wasted some precious time. I scrapped the testing protocol too and went back to focusing on delivering the MVP first.
 
-Finally, my biggest worry is finding the compromise between the good "academic" deliverable, and the good "business" delivery. Having to rewrite documents every time I learned something new about good practices and architecture is not something I would have done if I were to be focused solely on delivering a great product. But in my rush to catch up for my wrong architecture choice, I also had to rewrite documents. This is partly why this document came in late, relative to the deadline.
+Finally, my biggest worry is finding the compromise between the good "academic" deliverables, and the good "business" delivery. Having to rewrite documents every time I learned something new about good practices and architecture is not something I would have done if I were to be focused solely on delivering a great product. But in my rush to catch up for my wrong architecture choice, I also had to rewrite documents. This is partly why this document came in late, relative to the deadline.
 
-I also took the hard decision of adopting a "test-last" approach, simply because I do not have the time to drive my development with tests. I do plan however, to build up my testing capabilities in the following weeks, as described in the Quality Assurance section.
+I also took the tough decision of adopting a "test-last" approach, simply because I do not have the time to drive my development with tests. I do plan however, to build up my testing capabilities in the following weeks, as described in the Quality Assurance section.
 
 Those were of course, valuable lessons, and the stress they generated will surely remind me to do differently next time!
 
@@ -2353,7 +2355,7 @@ Those were of course, valuable lessons, and the stress they generated will surel
 
 Going beyond the scope of this first iteration of RexMax, the final goal is still to reduce stock-outs and surpluses and to manage inventory better.
 
-Therefore, any feature that goes into this direction is a possible future improvement!
+Therefore, any feature that goes in this direction is a possible future improvement!
 
 The Store Managers are very eager to have artificial intelligence set thresholds for them. This cannot be done without historical data, which we have started producing with this iteration. Once we have sufficient data (which is why my historical data design was exhaustive, so that we can later have all the data we need), we will be able to **move progressively towards a fully automated system** (once they trust it, that is).
 
@@ -2361,17 +2363,19 @@ For this we will probably need an improved Linear regression substitute, such as
 
 Another way to improve on this would be to have "**seasonality" or "promo" flags**, which could help even the linear model know we are going to need more stock for Christmas than in August.
 
-One problem that I already anticipated in the risks & mitigation table is the **risk inherent to data trustworthiness and quality**. My system is (for now) dependent on the categorisation algorithm that attributes a category based on the pareto distrbution, to focus on the 20% of products that generate 80% of the sales. If that categorisation process was faulty, my KPIs 3 months after the orders could probably be off track. I need to audit how this data i depend on is generated, and if necessary, compute it locally.
+One problem that I already anticipated in the risks & mitigation table is the **risk inherent to data trustworthiness and quality**. My system is (for now) dependent on the categorisation algorithm that attributes a category based on the pareto distrbution, to focus on the 20% of products that generate 80% of the sales. If that categorisation process was faulty, my KPIs 3 months after the orders could probably be off track. I need to audit how this data I depend on is generated, and if necessary, compute it locally.
 
-Speaking of data quality, my documentation does not mention validators enough, but if I wish to have data quality, i must sanitise the data (garbage in, garbage out). One idea is to have **validation routines** to at least report "illegal values" in the database, which could pollute the prediction algorithms.
+Speaking of data quality, my documentation does not mention input validation enough, but if I wish to have data quality, i must sanitise the data (garbage in, garbage out). One idea is to have **validation routines** to at least report "illegal values" in the database, which could pollute the prediction algorithms.
 
-I am not knowledgeable enough to know what the next step is after that, but if there are several store managers producing historical data, it would probably be a good thing to **store that historical data in a centralised place to perform company-wide analyses** to **compare methodologies** and **decisions**, which will be crucial for the **company's** desired **process uniformisation**. Once the app moves away from its decentralised architecture, it will be easier to imagine sending notifications and alerts when certain scenarios happen, and perform continuous analysis for a seamless experience.
+I am not advanced enough to know what the next step is after that, but if there are several store managers producing historical data, it would probably be a good thing to **store that historical data in a centralised place to perform company-wide analyses** to **compare methodologies** and **decisions**, which will be crucial for the **Company's** desired **process uniformisation**. Once the app moves away from its decentralised architecture, it will be easier to envision sending notifications and alerts when certain scenarios happen, identify opportunities, and perform continuous analysis for a seamless experience.
 
 Other consulted collaborators are very eager to have a tabular view kind of app to perform simple functions as it is the case here but from a dedicated app to **put an end to sprawling of Excel sheets**. The "TabbedView" module already has the capacity to build the views that the user prefers: the user chooses their tables, their columns, the order and they could potentially create their workflows and action buttons too! There is tremendous room for expansion given that we built on solid foundations.
 
-One thing that is currently lacking for overall reliability of the product is the logging. The app is logging into the dev console, having telemetry would allow to understand and analyse how users use the product without having to elaborate interviews with them, which in turn could generate more ideas and open up a lot of doors.
+One thing that is currently lacking for overall reliability of the product is logging. The app is logging into the dev console, but having actual telemetry would allow to understand and analyse how users use the product without having to conduct interviews with them, which in turn could generate more ideas and open up a lot of doors.
 
-Finally, as already mentioned in the QA and management part, testing will come gradually, I suspect that it is going to take a good effort at some point to **flip the paradigm into a test-driven one**, **to gain the reliability and agility** of a fully modular testable enterprise-grade product.
+Finally, as already mentioned in the QA and Management part, testing will come gradually, I suspect that it is going to take a good effort at some point to **flip the paradigm into a test-driven one**, **to gain the reliability and agility** of a fully modular testable enterprise-grade product.
+
+Thank you for reading me!
 
 ___
 
