@@ -248,7 +248,7 @@ The cyclic nature of items means that for the "Reorder Level" program to functio
 
 This would have been the job of the replenishers previously as they were tied to specific stores, but as they have been moved up to an interstore role (they are now specialised by product categories, not stores), this task is now in the hands of... the store manager, who, you probably guessed it, is already very busy.
 
-And this is where all the problem lies. **We have an algorithm allowing the company as a whole to be perform better thanks to economies of scale**. We also have **buyers**[^6]**/replenishers** that can now **spend more time finding better products and drive their decisions on actual data they have time to read**, but **now, store managers are overwhelmed with reviewing and adjusting Min/Max thresholds for several tens of thousands of items**, and they **didn't anticipate that** as they **weren't included in the development of this system**.
+And this is where all the problem lies. **We have an algorithm allowing the company as a whole to be perform better thanks to economies of scale**. We also have **buyers**[^6]**/replenishers** who can now **spend more time finding better products and drive their decisions from actual data they have time to read**, but **now, store managers are overwhelmed with reviewing and adjusting Min/Max thresholds for several tens of thousands of items**, and they **didn't anticipate that** as they **weren't included in the development of this system**.
 
 This is when I started researching about this Min/Max[^7] adjustment problem, and started wondering if my solution could revolve around this problem instead.
 
