@@ -272,7 +272,7 @@ This was unintended at first but seeing the positive effects of listening active
 
 I can confidently say that this approach will help a lot with the adoption of the product.
 
-<details><summary><i>Click to reveal the raw verbatims</i></summary></details></summary>
+<details><summary><i>Click to reveal the raw verbatims</i></summary>
 
 **Success Criteria – Storemanager-A**
 
