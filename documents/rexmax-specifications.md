@@ -216,7 +216,7 @@ Util then, a same day answer to requests, and same week intervention for less im
 
 | Name | Type | Deadline | Goal | Link |
 |---|---|---|---|---|
-| Project Charter | Document (markdown) | May 8th, 2025 | This document aims to ensure alignment with stakeholders and agree on the problem to tackle, high level objectives, methodology and planning, prior to developing the actual solution. | [Link] |
+| Project Charter | Document (markdown) | May 8th, 2025 | This document aims to ensure alignment with stakeholders and agree on the problem to tackle, high level objectives, methodology and planning, prior to developing the actual solution. | [Link](https://github.com/mathiskakal/moonshot/blob/4c0d15d1f57055739b8938ce3dd76de7baa3455a/documents/project-charter.md) |
 | RexMax Specifications (this document) | Document (markdown) | June 8th, 2025 | This document aims to provide insights on the whole thought and development process of the product. | *This Document* |
 | RexMax Jury Version 0.1.0 (App foundations) | Code Repository | June 8th, 2025 | Provide the foundation of the program for it to be assessed by the jury. | Build the project locally from the [master branch](https://github.com/mathiskakal/moonshot/tree/master) |
 | RexMax Alpha Version | Binary Executable | June 20th, 2025 | Provide the MVP of the app, which will kickoff alpha testing. | *Will be available in the releases feed* |
