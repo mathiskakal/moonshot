@@ -939,7 +939,7 @@ flowchart TD
 | Display Name | Source Column / Expression | Base Table |
 |---|---|---|
 | Code Item | ArticlesDimUDF.articlescode | ArticlesDimUDF |
-| Désignation Bricomax | ArticlesDimUDF.articlesdesc | ArticlesDimUDF |
+| Désignation *The Company* | ArticlesDimUDF.articlesdesc | ArticlesDimUDF |
 | Code Barre | ArticlesDimUDF.BarCode | ArticlesDimUDF |
 | Fournisseur Par Défaut | ArticlesDimUDF.DIM6CODE | ArticlesDimUDF |
 | Nom Fournisseur | ArticlesDimUDF.DIM6DESC | ArticlesDimUDF |
