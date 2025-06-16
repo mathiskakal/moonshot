@@ -1491,7 +1491,7 @@ graph TD
 
 ### Clean Architecture
 
-I tool some inspiration from Clean Architecture principles:
+I took some inspiration from Clean Architecture principles:
 
 - **Entities / Core** => plain TypeScript models (`Sku`, `ThresholdDecision`).
 
